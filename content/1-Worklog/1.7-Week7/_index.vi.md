@@ -1,59 +1,33 @@
 ---
 title: "Worklog Tuần 7"
-date: 2024-01-01
-weight: 1
+date: 2026-07-27
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần 7
 
-### Mục tiêu tuần 7:
+* Hoàn thiện các chức năng chính của hệ thống.
+* Tối ưu giao diện người dùng và trải nghiệm sử dụng.
+* Khắc phục các lỗi phát sinh trong quá trình tích hợp Frontend và Backend.
+* Kiểm thử toàn bộ quy trình xử lý ảnh.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần này
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Hoàn thiện Dashboard và History Page.<br>- Hiển thị dữ liệu xử lý ảnh lấy từ Backend.<br>- Đồng bộ trạng thái xử lý của từng Batch. | 27/07/2026 | 27/07/2026 | React Documentation |
+| 3 | - Tối ưu MainLayout và Sidebar.<br>- Điều chỉnh bố cục giao diện trên các trang Upload, Dashboard và Home.<br>- Khắc phục lỗi CSS và Responsive Layout. | 28/07/2026 | 28/07/2026 | CSS Documentation |
+| 4 | - Hoàn thiện chức năng đăng nhập bằng Email và Google OAuth.<br>- Kiểm tra quá trình lưu JWT Token và thông tin người dùng.<br>- Hoàn thiện cơ chế xác thực và phân quyền truy cập. | 29/07/2026 | 30/07/2026 | Google Identity Documentation |
+| 5 | - Hoàn thiện chức năng Upload ảnh và xử lý phản hồi từ Backend.<br>- Kiểm tra các trường hợp lỗi khi Upload.<br>- Tối ưu quá trình gọi API và xử lý ngoại lệ. | 31/07/2026 | 31/07/2026 | Spring Boot Documentation |
+| 6 | - Kiểm thử tích hợp toàn bộ hệ thống.<br>- Đánh giá luồng xử lý từ đăng nhập, tải ảnh, xử lý ảnh đến hiển thị kết quả.<br>- Khắc phục các lỗi còn tồn tại và tối ưu hiệu năng giao diện. | 01/08/2026 | 02/08/2026 | Tài liệu dự án |
 
+### Kết quả đạt được tuần 7
 
-### Kết quả đạt được tuần 7:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thiện Dashboard và History Page với dữ liệu được lấy trực tiếp từ Backend.
+* Hoàn thiện giao diện MainLayout, Sidebar và Navigation, đảm bảo tính nhất quán giữa các trang.
+* Tích hợp thành công chức năng đăng nhập bằng Email và Google OAuth.
+* Hoàn thiện quy trình Upload ảnh và xử lý phản hồi từ Backend.
+* Khắc phục các lỗi phát sinh trong quá trình tích hợp API, xác thực người dùng và giao diện.
+* Kiểm thử thành công toàn bộ quy trình hoạt động của hệ thống từ đăng nhập đến xử lý và hiển thị ảnh tối ưu hóa.

@@ -1,59 +1,36 @@
 ---
 title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+date: 2026-06-29
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần 3
 
-### Mục tiêu tuần 3:
+* Hoàn thiện chức năng xử lý ảnh trên AWS Lambda.
+* Khắc phục các lỗi phát sinh khi triển khai thư viện Pillow.
+* Kiểm thử quy trình xử lý ảnh tự động.
+* Chuẩn bị dữ liệu đầu ra phục vụ các chức năng mở rộng.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần này
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Kiểm thử AWS Lambda với nhiều loại ảnh khác nhau.<br>- Kiểm tra hoạt động của Resize và Compression.<br>- Đánh giá chất lượng ảnh sau xử lý. | 29/06/2026 | 29/06/2026 | AWS Lambda Documentation |
+| 3 | - Khắc phục lỗi Lambda Layer khi tích hợp Pillow.<br>- Tìm hiểu sự khác biệt giữa môi trường phát triển và môi trường Lambda.<br>- Thử nghiệm nhiều phương pháp đóng gói thư viện. | 30/06/2026 | 30/06/2026 | Pillow Documentation |
+| 4 | - Sử dụng Docker để xây dựng Lambda Layer tương thích với Runtime Python.<br>- Kiểm tra khả năng import thư viện Pillow trên Lambda. | 01/07/2026 | 01/07/2026 | AWS Lambda Layers |
+| 5 | - Hoàn thiện chức năng sinh Thumbnail.<br>- Lưu ảnh đã xử lý vào Output Bucket.<br>- Kiểm tra cấu trúc thư mục lưu trữ ảnh trên Amazon S3. | 02/07/2026 | 03/07/2026 | Amazon S3 Documentation |
+| 6 | - Thiết kế cấu trúc metadata phục vụ lưu trữ thông tin xử lý ảnh.<br>- Xác định các trường dữ liệu như Batch ID, Processing ID, trạng thái xử lý và kích thước ảnh.<br>- Tổng hợp kết quả kiểm thử hệ thống. | 04/07/2026 | 05/07/2026 | AWS Best Practices |
 
+### Kết quả đạt được tuần 3
 
-### Kết quả đạt được tuần 3:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Khắc phục thành công các lỗi phát sinh khi triển khai Pillow trên AWS Lambda.
+* Xây dựng Lambda Layer tương thích với môi trường Runtime của AWS.
+* Hoàn thiện các chức năng xử lý ảnh:
+  * Resize ảnh.
+  * Nén ảnh.
+  * Sinh Thumbnail.
+* Hoàn thiện quy trình lưu ảnh sau xử lý vào Output Bucket.
+* Kiểm thử thành công luồng xử lý tự động từ Amazon S3 đến AWS Lambda.
+* Thiết kế bộ metadata phục vụ cho việc lưu lịch sử xử lý ảnh ở các giai đoạn phát triển tiếp theo.

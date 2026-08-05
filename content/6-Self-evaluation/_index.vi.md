@@ -1,40 +1,53 @@
 ---
 title: "Tự đánh giá"
-date: 2024-01-01
+date: 2026-08-04
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+Trong suốt thời gian thực tập tại **Công ty TNHH Amazon Web Services Viet Nam** từ **15/06/2026** đến **15/08/2026**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng các kiến thức đã được học tại trường vào môi trường làm việc thực tế.
 
-Trong suốt thời gian thực tập tại **[Tên công ty/tổ chức]** từ **[ngày bắt đầu]** đến **[ngày kết thúc]**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.  
-Tôi đã tham gia **[mô tả ngắn gọn dự án hoặc công việc chính]**, qua đó cải thiện kỹ năng **[liệt kê kỹ năng: lập trình, phân tích, viết báo cáo, giao tiếp…]**.  
+Trong quá trình thực tập, tôi tham gia phát triển **Hệ thống tối ưu hóa ảnh tự động trên nền tảng AWS (Automatic Image Optimization System)**. Công việc của tôi bao gồm xây dựng và phát triển giao diện người dùng bằng **React, TypeScript và Vite**, tích hợp với **Backend J2EE** thông qua REST API, triển khai xác thực người dùng bằng **Google OAuth**, xây dựng quy trình tải ảnh lên hệ thống và kết nối với các dịch vụ **Amazon S3** và **AWS Lambda** để xử lý ảnh tự động.
 
-Về tác phong, tôi luôn cố gắng hoàn thành tốt nhiệm vụ, tuân thủ nội quy, và tích cực trao đổi với đồng nghiệp để nâng cao hiệu quả công việc.
+Thông qua dự án, tôi đã nâng cao đáng kể các kỹ năng chuyên môn như:
 
-Để phản ánh một cách khách quan quá trình thực tập, tôi xin tự đánh giá bản thân dựa trên các tiêu chí dưới đây:
+* Phát triển ứng dụng Web với React và TypeScript.
+* Thiết kế giao diện và trải nghiệm người dùng.
+* Xây dựng và tích hợp RESTful API.
+* Làm việc với AWS (Amazon S3, AWS Lambda, IAM, CloudWatch).
+* Xử lý xác thực người dùng bằng JWT và Google OAuth.
+* Sử dụng Git để quản lý mã nguồn và làm việc theo quy trình phát triển phần mềm.
+* Phân tích yêu cầu, xử lý lỗi và tối ưu hệ thống.
 
+Bên cạnh kiến thức chuyên môn, tôi cũng học được cách làm việc theo quy trình dự án thực tế, biết cách phân chia công việc, chủ động tìm hiểu tài liệu kỹ thuật, trao đổi với các thành viên khi gặp khó khăn và từng bước hoàn thiện kỹ năng giải quyết vấn đề.
 
-| STT | Tiêu chí                            | Mô tả                                                                                            | Tốt | Khá | Trung bình |
-| --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | --- | --- | ---------- |
-| 1   | **Kiến thức và kỹ năng chuyên môn** | Hiểu biết về ngành, áp dụng kiến thức vào thực tế, kỹ năng sử dụng công cụ, chất lượng công việc | ✅   | ☐   | ☐          |
-| 2   | **Khả năng học hỏi**                | Tiếp thu kiến thức mới, học hỏi nhanh                                                            | ☐   | ✅   | ☐          |
-| 3   | **Chủ động**                        | Tự tìm hiểu, nhận nhiệm vụ mà không chờ chỉ dẫn                                                  | ✅   | ☐   | ☐          |
-| 4   | **Tinh thần trách nhiệm**           | Hoàn thành công việc đúng hạn, đảm bảo chất lượng                                                | ✅   | ☐   | ☐          |
-| 5   | **Kỷ luật**                         | Tuân thủ giờ giấc, nội quy, quy trình làm việc                                                   | ☐   | ☐   | ✅          |
-| 6   | **Tính cầu tiến**                   | Sẵn sàng nhận feedback và cải thiện bản thân                                                     | ☐   | ✅   | ☐          |
-| 7   | **Giao tiếp**                       | Trình bày ý tưởng, báo cáo công việc rõ ràng                                                     | ☐   | ✅   | ☐          |
-| 8   | **Hợp tác nhóm**                    | Làm việc hiệu quả với đồng nghiệp, tham gia nhóm                                                 | ✅   | ☐   | ☐          |
-| 9   | **Ứng xử chuyên nghiệp**            | Tôn trọng đồng nghiệp, đối tác, môi trường làm việc                                              | ✅   | ☐   | ☐          |
-| 10  | **Tư duy giải quyết vấn đề**        | Nhận diện vấn đề, đề xuất giải pháp, sáng tạo                                                    | ☐   | ✅   | ☐          |
-| 11  | **Đóng góp vào dự án/tổ chức**      | Hiệu quả công việc, sáng kiến cải tiến, ghi nhận từ team                                         | ✅   | ☐   | ☐          |
-| 12  | **Tổng thể**                        | Đánh giá chung về toàn bộ quá trình thực tập                                                     | ✅   | ☐   | ☐          |
+Về tác phong làm việc, tôi luôn cố gắng hoàn thành các nhiệm vụ được giao đúng thời hạn, nghiêm túc tiếp thu góp ý từ người hướng dẫn, đồng thời chủ động nghiên cứu các công nghệ mới để áp dụng vào dự án.
 
-### Cần cải thiện
+Để phản ánh khách quan quá trình thực tập, tôi xin tự đánh giá theo các tiêu chí sau:
 
-* Nâng cao tính kỹ luật, chấp hành nghiêm chỉnh nội quy của công ty hoặc bất kỳ trong một tổ chức nào
-* Cải thiện trong cách tư duy giải quyết vấn đề
-* Học cách giao tiếp tốt hơn trong giao tiếp hằng ngày và trong công việc, xử lý tình huống
+| STT | Tiêu chí | Mô tả | Tốt | Khá | Trung bình |
+| --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | :---: | :---: | :---: |
+| 1 | **Kiến thức và kỹ năng chuyên môn** | Khả năng áp dụng kiến thức chuyên ngành vào thực tế và chất lượng công việc | ✅ | ☐ | ☐ |
+| 2 | **Khả năng học hỏi** | Tiếp thu kiến thức mới và tự nghiên cứu công nghệ | ✅ | ☐ | ☐ |
+| 3 | **Chủ động** | Chủ động tìm hiểu, đề xuất giải pháp và thực hiện công việc | ✅ | ☐ | ☐ |
+| 4 | **Tinh thần trách nhiệm** | Hoàn thành công việc đúng thời hạn và đảm bảo chất lượng | ✅ | ☐ | ☐ |
+| 5 | **Kỷ luật** | Chấp hành quy định, quy trình làm việc | ✅ | ☐ | ☐ |
+| 6 | **Tính cầu tiến** | Luôn tiếp thu góp ý và không ngừng cải thiện bản thân | ✅ | ☐ | ☐ |
+| 7 | **Giao tiếp** | Trao đổi công việc với hướng dẫn viên và các thành viên trong nhóm | ☐ | ✅ | ☐ |
+| 8 | **Hợp tác nhóm** | Phối hợp với các thành viên trong quá trình phát triển dự án | ✅ | ☐ | ☐ |
+| 9 | **Ứng xử chuyên nghiệp** | Tôn trọng đồng nghiệp, có thái độ làm việc nghiêm túc | ✅ | ☐ | ☐ |
+| 10 | **Tư duy giải quyết vấn đề** | Phân tích nguyên nhân và tìm hướng xử lý các lỗi phát sinh | ☐ | ✅ | ☐ |
+| 11 | **Đóng góp vào dự án/tổ chức** | Hoàn thành các chức năng được phân công và đóng góp vào tiến độ dự án | ✅ | ☐ | ☐ |
+| 12 | **Tổng thể** | Đánh giá chung toàn bộ quá trình thực tập | ✅ | ☐ | ☐ |
+
+### Những điểm cần cải thiện
+
+* Nâng cao kỹ năng phân tích và tối ưu giải pháp khi xử lý các bài toán có độ phức tạp cao.
+* Cải thiện khả năng giao tiếp và trình bày ý tưởng trong các buổi trao đổi kỹ thuật.
+* Tiếp tục học tập và cập nhật các công nghệ mới liên quan đến Cloud Computing, AWS và phát triển Web.
+* Tích lũy thêm kinh nghiệm làm việc với các hệ thống có quy mô lớn và quy trình phát triển phần mềm chuyên nghiệp.
+
+### Kết luận
+
+Kỳ thực tập là cơ hội quý báu giúp tôi tiếp cận môi trường làm việc thực tế và vận dụng những kiến thức đã học vào quá trình phát triển một sản phẩm hoàn chỉnh. Tôi không chỉ củng cố kiến thức về lập trình Web và điện toán đám mây mà còn rèn luyện được tư duy làm việc nhóm, khả năng tự học và kỹ năng giải quyết vấn đề. Những kinh nghiệm tích lũy được trong thời gian thực tập sẽ là nền tảng quan trọng cho quá trình học tập cũng như công việc của tôi trong tương lai.

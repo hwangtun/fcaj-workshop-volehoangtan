@@ -1,57 +1,34 @@
 ---
-title: "Week 6 Worklog"
-date: 2024-01-01
-weight: 1
+title: "Worklog Week 6"
+date: 2026-07-20
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Objectives
 
-### Week 6 Objectives:
+* Integrate the frontend with the J2EE backend.
+* Develop service classes for REST API communication.
+* Complete the image upload feature.
+* Implement Google OAuth authentication.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Finish Date | Reference |
+| --- | --- | --- | --- | --- |
+| Mon | - Analyze the REST APIs provided by the backend.<br>- Configure a shared Axios instance.<br>- Build service classes for API communication. | 20/07/2026 | 20/07/2026 | Axios Documentation <br> Spring Boot REST API |
+| Tue | - Integrate the Image Upload API.<br>- Use FormData to upload multiple images.<br>- Process the backend response after successful uploads. | 21/07/2026 | 21/07/2026 | MDN FormData |
+| Wed | - Integrate Batch and Image History APIs.<br>- Display backend data on Dashboard and History pages.<br>- Handle loading states and API errors. | 22/07/2026 | 23/07/2026 | Spring Boot Documentation |
+| Thu | - Integrate Google OAuth login.<br>- Configure the Google OAuth Client.<br>- Store JWT tokens and user information after successful authentication. | 24/07/2026 | 24/07/2026 | Google Identity Documentation |
+| Fri | - Complete AuthContext and authentication management.<br>- Test the login and image upload workflow.<br>- Resolve issues encountered during backend integration. | 25/07/2026 | 26/07/2026 | React Context API Documentation |
 
+### Results
 
-### Week 6 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Successfully integrated the React frontend with the J2EE backend through REST APIs.
+* Developed service classes using Axios for backend communication.
+* Completed the multiple image upload feature using FormData.
+* Displayed batch information and image processing history retrieved from the backend.
+* Successfully integrated Google OAuth authentication.
+* Implemented AuthContext to manage JWT tokens and user information.
+* Completed the authentication workflow and prepared the system for the final testing and optimization phase.

@@ -1,33 +1,34 @@
 ---
 title: "Workshop"
-date: 2024-01-01
+date: 2026-08-04
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
-# Đảm bảo truy cập Hybrid an toàn đến S3 bằng cách sử dụng VPC endpoint
+# Triển khai hệ thống Automatic Image Optimization System trên AWS
 
 #### Tổng quan
 
-**AWS PrivateLink** cung cấp kết nối riêng tư đến các dịch vụ aws từ VPCs hoặc trung tâm dữ liệu (on-premise) mà không làm lộ lưu lượng truy cập ra ngoài public internet.
+Hệ thống **Automatic Image Optimization System** được triển khai trên nền tảng AWS nhằm tự động hóa quá trình xử lý và tối ưu hóa hình ảnh. Giải pháp sử dụng kiến trúc serverless, giúp giảm thiểu việc quản lý hạ tầng, tăng khả năng mở rộng và đảm bảo khả năng xử lý ổn định khi số lượng hình ảnh tăng lên.
 
-Trong bài lab này, chúng ta sẽ học cách tạo, cấu hình, và kiểm tra VPC endpoints để cho phép workload của bạn tiếp cận các dịch vụ AWS mà không cần đi qua Internet công cộng.
+Trong hệ thống này, người dùng có thể tải hình ảnh lên hệ thống. Hình ảnh sau đó được lưu trữ trên **Amazon S3** và kích hoạt quá trình xử lý tự động thông qua **AWS Lambda**. Lambda thực hiện các thao tác tối ưu như nén dung lượng, thay đổi kích thước và tạo phiên bản hình ảnh đã xử lý.
 
-Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gateway vpc endpoint và interface vpc endpoint. Hai loại vpc endpoints này mang đến nhiều lợi ích tùy thuộc vào việc bạn truy cập đến S3 từ môi trường cloud hay từ trung tâm dữ liệu (on-premise).
-+ **Gateway** - Tạo gateway endpoint để gửi lưu lượng đến Amazon S3 hoặc DynamoDB using private IP addresses. Bạn điều hướng lưu lượng từ VPC của bạn đến gateway endpoint bằng các bảng định tuyến (route tables)
-+ **Interface** - Tạo interface endpoint để gửi lưu lượng đến các dịch vụ điểm cuối (endpoints) sử dụng Network Load Balancer để phân phối lưu lượng. Lưu lượng dành cho dịch vụ điểm cuối được resolved bằng DNS.
+Kết quả xử lý được lưu trữ trên S3 Output Bucket, đồng thời thông tin metadata của quá trình xử lý được lưu vào **Amazon DynamoDB** để phục vụ việc tra cứu lịch sử, theo dõi trạng thái và quản lý dữ liệu.
+
+Hệ thống cũng tích hợp các cơ chế giám sát và bảo mật:
+
+- **CloudWatch:** Theo dõi log, trạng thái hoạt động và hiệu suất của Lambda.
+- **SNS:** Gửi thông báo cảnh báo đến quản trị viên khi xảy ra lỗi trong quá trình xử lý.
+- **IAM:** Quản lý quyền truy cập giữa các dịch vụ AWS theo nguyên tắc Least Privilege.
+- **KMS:** Mã hóa dữ liệu nhằm tăng cường khả năng bảo mật trong quá trình lưu trữ.
 
 #### Nội dung
 
-1. [Tổng quan về workshop](5.1-Workshop-overview/)
-2. [Chuẩn bị](5.2-Prerequiste/)
-3. [Truy cập đến S3 từ VPC](5.3-S3-vpc/)
-4. [Truy cập đến S3 từ TTDL On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (làm thêm)](5.5-Policy/)
-6. [Dọn dẹp tài nguyên](5.6-Cleanup/)
+1. [Tổng quan kiến trúc hệ thống](5.1-Workshop-overview/)
+2. [Chuẩn bị môi trường AWS](5.2-Prerequiste/)
+3. [Triển khai Amazon S3 lưu trữ hình ảnh](5.3-S3-setup/)
+4. [Triển khai AWS Lambda xử lý ảnh](5.4-Lambda-deployment/)
+5. [Triển khai Amazon DynamoDB lưu trữ Metadata](5.5-DynamoDB/)
+6. [Monitoring hệ thống với CloudWatch và SNS](5.6-Monitoring/)
+7. [Dọn dẹp tài nguyên AWS sau triển khai](5.7-Cleanup/)

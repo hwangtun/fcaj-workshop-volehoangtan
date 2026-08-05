@@ -1,59 +1,37 @@
 ---
 title: "Worklog Tuần 4"
-date: 2024-01-01
-weight: 1
+date: 2026-07-06
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần 4
 
-### Mục tiêu tuần 4:
+* Khởi tạo ứng dụng Frontend bằng React + Vite + TypeScript.
+* Thiết kế giao diện Upload Image.
+* Xây dựng chức năng xem trước ảnh trước khi tải lên.
+* Hoàn thiện quy trình quản lý danh sách ảnh trên giao diện.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần này
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Khởi tạo dự án Frontend bằng React, Vite và TypeScript.<br>- Xây dựng cấu trúc thư mục theo mô hình component-based.<br>- Cài đặt các thư viện cần thiết cho dự án. | 06/07/2026 | 06/07/2026 | https://react.dev <br> https://vite.dev |
+| 3 | - Thiết kế giao diện Upload Image.<br>- Xây dựng vùng kéo thả (Drag & Drop) và chọn ảnh từ thiết bị.<br>- Hỗ trợ tải lên nhiều ảnh cùng lúc. | 07/07/2026 | 07/07/2026 | React Documentation |
+| 4 | - Xây dựng chức năng Preview ảnh.<br>- Hiển thị tên file, kích thước và định dạng ảnh.<br>- Cho phép xóa từng ảnh khỏi danh sách trước khi tải lên. | 08/07/2026 | 08/07/2026 | MDN Web Docs |
+| 5 | - Thiết kế các chế độ nén ảnh (Compression Mode).<br>- Xây dựng các Preset tối ưu hóa (High Quality, Balanced, Storage Saving).<br>- Cho phép áp dụng Preset cho toàn bộ hoặc từng ảnh. | 09/07/2026 | 10/07/2026 | Tài liệu dự án |
+| 6 | - Xây dựng chức năng Validation dữ liệu đầu vào.<br>- Kiểm tra định dạng ảnh, kích thước và số lượng ảnh được tải lên.<br>- Hoàn thiện giao diện Upload Page và kiểm thử các chức năng đã xây dựng. | 11/07/2026 | 12/07/2026 | React Documentation |
 
+### Kết quả đạt được tuần 4
 
-### Kết quả đạt được tuần 4:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Khởi tạo thành công dự án Frontend bằng React + Vite + TypeScript.
+* Hoàn thiện giao diện Upload Image với thiết kế trực quan và dễ sử dụng.
+* Xây dựng thành công chức năng:
+  * Drag & Drop ảnh.
+  * Upload nhiều ảnh.
+  * Preview ảnh trước khi tải lên.
+  * Xóa ảnh khỏi danh sách.
+* Hoàn thiện cơ chế lựa chọn chế độ nén và Preset tối ưu hóa ảnh.
+* Xây dựng Validation nhằm kiểm tra dữ liệu đầu vào trước khi gửi đến Backend.
+* Chuẩn bị đầy đủ giao diện để tích hợp với API xử lý ảnh ở các giai đoạn tiếp theo.

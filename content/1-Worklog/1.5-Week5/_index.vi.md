@@ -1,59 +1,36 @@
 ---
 title: "Worklog Tuần 5"
-date: 2024-01-01
-weight: 1
+date: 2026-07-13
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần 5
 
-### Mục tiêu tuần 5:
+* Hoàn thiện cấu trúc giao diện chính của hệ thống.
+* Xây dựng Dashboard và Sidebar.
+* Hoàn thiện hệ thống điều hướng (Routing).
+* Chuẩn bị kết nối giữa Frontend và Backend J2EE.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần này
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Thiết kế MainLayout dùng chung cho toàn bộ hệ thống.<br>- Xây dựng Sidebar và Navigation Menu.<br>- Hoàn thiện Footer và bố cục giao diện. | 13/07/2026 | 13/07/2026 | https://reactrouter.com |
+| 3 | - Cấu hình React Router.<br>- Phân chia các Layout cho Landing Page, Authentication và Dashboard.<br>- Thiết lập Protected Route cho các trang yêu cầu đăng nhập. | 14/07/2026 | 14/07/2026 | React Router Documentation |
+| 4 | - Xây dựng giao diện Dashboard.<br>- Thiết kế các thẻ thống kê (Statistics Cards).<br>- Xây dựng Recent Items và Recent Processing để hiển thị lịch sử xử lý ảnh. | 15/07/2026 | 16/07/2026 | React Documentation |
+| 5 | - Hoàn thiện giao diện Sidebar.<br>- Điều chỉnh CSS, xử lý lỗi chồng lấn giữa Sidebar và nội dung chính.<br>- Đồng bộ giao diện giữa các trang. | 17/07/2026 | 17/07/2026 | CSS Flexbox Guide |
+| 6 | - Chuẩn bị tích hợp Backend J2EE.<br>- Xây dựng cấu trúc Service để giao tiếp với API.<br>- Thiết kế các kiểu dữ liệu (TypeScript Interfaces) phục vụ việc nhận dữ liệu từ Backend. | 18/07/2026 | 19/07/2026 | Spring Boot Documentation |
 
+### Kết quả đạt được tuần 5
 
-### Kết quả đạt được tuần 5:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thiện MainLayout và Sidebar cho toàn bộ hệ thống.
+* Xây dựng thành công hệ thống điều hướng bằng React Router.
+* Hoàn thiện Dashboard với các thành phần:
+  * Statistics Cards.
+  * Recent Items.
+  * Recent Processing.
+* Áp dụng Protected Route nhằm giới hạn quyền truy cập vào các trang yêu cầu xác thực.
+* Khắc phục các lỗi về bố cục và CSS giữa Sidebar và khu vực hiển thị nội dung.
+* Chuẩn bị cấu trúc Frontend để tích hợp với Backend J2EE thông qua các Service và Interface.

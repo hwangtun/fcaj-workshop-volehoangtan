@@ -1,0 +1,9 @@
+{
+  "name": "fcj-workshop-template-tan",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "hugo server -D",
+    "build": "hugo"
+  }
+}

@@ -1,57 +1,33 @@
 ---
-title: "Week 7 Worklog"
-date: 2024-01-01
-weight: 1
+title: "Worklog Week 7"
+date: 2026-07-27
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Objectives
 
-### Week 7 Objectives:
+* Complete the core system features.
+* Improve the user interface and user experience.
+* Resolve issues found during frontend-backend integration.
+* Perform end-to-end system testing.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Finish Date | Reference |
+| --- | --- | --- | --- | --- |
+| Mon | - Complete the Dashboard and History pages.<br>- Display image processing data retrieved from the backend.<br>- Synchronize batch processing status. | 27/07/2026 | 27/07/2026 | React Documentation |
+| Tue | - Optimize the MainLayout and Sidebar.<br>- Improve the layout of the Upload, Dashboard and Home pages.<br>- Fix CSS and responsive layout issues. | 28/07/2026 | 28/07/2026 | CSS Documentation |
+| Wed | - Complete Email and Google OAuth authentication.<br>- Verify JWT token storage and user information management.<br>- Finalize authentication and access control. | 29/07/2026 | 30/07/2026 | Google Identity Documentation |
+| Thu | - Finalize the image upload workflow.<br>- Handle backend responses and upload errors.<br>- Optimize API requests and exception handling. | 31/07/2026 | 31/07/2026 | Spring Boot Documentation |
+| Fri | - Perform end-to-end system integration testing.<br>- Verify the complete workflow from login, image upload, image processing to result display.<br>- Resolve remaining issues and improve frontend performance. | 01/08/2026 | 02/08/2026 | Project Documentation |
 
+### Results
 
-### Week 7 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Completed the Dashboard and History pages using real backend data.
+* Finalized the MainLayout, Sidebar and navigation system with a consistent user interface.
+* Successfully integrated both Email and Google OAuth authentication.
+* Completed the image upload workflow and backend response handling.
+* Resolved issues related to API integration, authentication and user interface.
+* Successfully completed end-to-end testing of the system, covering login, image upload, image optimization and result presentation.

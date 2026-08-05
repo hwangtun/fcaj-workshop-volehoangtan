@@ -5,27 +5,23 @@ weight: 1
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+#  AWS CDK – Infrastructure as Code for Modern Cloud Infrastructure
 
-Key points to know:
+During my internship and while learning about Infrastructure as Code (IaC) on AWS, I published a technical blog about AWS Cloud Development Kit (AWS CDK) on the AWS Study Group community. The blog introduces AWS CDK as a powerful framework for defining, managing, and deploying cloud infrastructure using code, enabling greater automation and more efficient infrastructure management for AWS projects.
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+The main topics covered in the blog include:
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+* An introduction to Infrastructure as Code (IaC) and the role of AWS CDK in provisioning and managing AWS infrastructure.
+* An explanation of the infrastructure deployment workflow using cdk synth, cdk diff, and cdk deploy, along with the relationship between AWS CDK and AWS CloudFormation.
+* The key advantages of AWS CDK, including infrastructure version control with Git, environment reproducibility, code reusability, and seamless integration with CI/CD pipelines.
+* Best practices for using AWS CDK, such as avoiding direct modifications through the AWS Management Console to prevent Infrastructure Drift, running cdk diff before deployment, and organizing infrastructure into multiple Stacks and Constructs for better maintainability and reusability.
+* An architecture diagram illustrating the AWS CDK deployment workflow, from application source code to AWS CloudFormation and the provisioned AWS resources.
 
-...Image...
+Through this blog, I gained a deeper understanding of the Infrastructure as Code (IaC) approach and strengthened my knowledge of AWS CDK as well as infrastructure automation practices on the AWS Cloud.
 
-...Link...
 
-...Guide...
+## Blog Link
+
+[Read the article on AWS Study Group](https://www.facebook.com/groups/660548818043427/?multi_permalinks=2234080517356908&hoisted_section_header_type=recently_seen&__cft__[0]=AZb29XuCsS2ASBvBcZMVpC3a3WWPu8ZhDL59LYPyV088Y1iiE9eqRqLg-cts8T4BBiyrYnDCgNw2OVnDT3Ym1IWIxLF6hwBlhSLZ33VUJtRWhyXWj0qZI4UO0erzPDquhlcFOI1MRZ0useuMx_1O2dP7u_HGzt6YWlHoFVd2MWol0g&__tn__=%2CO%2CP-R)

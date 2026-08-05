@@ -1,115 +1,202 @@
 ---
 title: "Proposal"
-date: 2024-01-01
+date: 2026-08-04
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
+---
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+# Automatic Image Optimization System on AWS
+
+## An Automatic Image Optimization Solution Using AWS Serverless Architecture
 
 ### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+
+The Automatic Image Optimization System is a platform that automatically optimizes images after they are uploaded by users. The system is designed for individuals and organizations that need to store large numbers of images while maintaining display quality and reducing storage consumption.
+
+Users simply upload images through a web interface. AWS Lambda then automatically processes, compresses, and optimizes the images, generates thumbnails, and stores the results in Amazon S3. Metadata generated during the processing workflow is stored in Amazon DynamoDB for history tracking and retrieval. The system uses AWS KMS to encrypt stored data, Amazon CloudWatch for monitoring, and Amazon SNS to send notifications when processing errors occur.
+
+The serverless architecture enables the system to scale automatically, reduce operational costs, and eliminate the need to manage application servers.
+
+---
 
 ### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+#### Current Challenges
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+Many individuals and organizations need to optimize images before storing them or publishing them on websites to reduce file size while maintaining image quality. However, this process is often performed manually using image editing software or online services, making it time-consuming and difficult to manage when processing large numbers of images.
+
+In addition, many existing solutions focus only on image compression without providing features for tracking processing history, managing metadata, or monitoring processing activities.
+
+#### Proposed Solution
+
+The team proposes an automatic image optimization system built on the AWS platform.
+
+Users upload images through a web application. The Spring Boot backend stores the uploaded images in the Amazon S3 Input Bucket and creates the initial metadata record. When a new image is uploaded, Amazon S3 triggers AWS Lambda to optimize the image according to the user-selected configuration.
+
+After processing, the optimized image and its thumbnail are stored in the Amazon S3 Output Bucket. The processing metadata is updated in Amazon DynamoDB to support processing history queries and status tracking. Amazon CloudWatch collects logs and monitors system activities, while Amazon SNS sends notifications whenever image processing fails. AWS KMS encrypts data stored in Amazon S3 to enhance security.
+
+The system provides a web interface that allows users to:
+
+- Register and sign in.
+- Upload multiple images simultaneously.
+- Track processing status.
+- View processing history.
+- Download processed images.
+
+In addition, administrators can monitor system usage statistics and manage user accounts.
+
+#### Benefits and Return on Investment (ROI)
+
+The system significantly reduces the time required for manual image optimization while decreasing storage usage and network bandwidth consumption. Automating the entire workflow minimizes administrative effort, improves operational efficiency, and enables the system to scale easily as the number of users grows.
+
+By leveraging AWS serverless services, operating costs are incurred only when image processing requests are executed, making the solution cost-effective for small and medium-sized applications.
+
+---
 
 ### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+The system adopts an AWS serverless architecture integrated with a Spring Boot backend and a React frontend.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+Main processing workflow:
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+1. Users upload images through the web application.
+2. The backend stores the images in the Amazon S3 Input Bucket.
+3. Amazon S3 generates an `ObjectCreated` event.
+4. AWS Lambda is triggered to process the image.
+5. Lambda optimizes the image and generates a thumbnail.
+6. The processed image is stored in the Amazon S3 Output Bucket.
+7. Metadata is updated in Amazon DynamoDB.
+8. Amazon CloudWatch records logs and monitors system activities.
+9. Amazon SNS sends notifications if processing errors occur.
+10. Users view their processing history and download the optimized images.
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+_(Insert the team's architecture diagram here.)_
+
+#### AWS Services Used
+
+- Amazon S3: stores original and optimized images.
+- AWS Lambda: processes and optimizes images.
+- Amazon DynamoDB: stores metadata and processing history.
+- AWS KMS: encrypts data stored in Amazon S3.
+- Amazon CloudWatch: monitors the system and collects logs.
+- Amazon SNS: sends error notifications.
+- AWS IAM: manages access permissions for AWS services.
+
+#### Component Design
+
+- **Frontend (React):** user interface.
+- **Backend (Spring Boot):** authentication, image upload, and history retrieval.
+- **Amazon S3:** stores input and output images.
+- **AWS Lambda:** processes images using Pillow.
+- **Amazon DynamoDB:** stores processing status and metadata.
+- **AWS KMS:** encrypts stored data.
+- **Amazon CloudWatch & Amazon SNS:** monitor the system and deliver notifications.
+
+---
 
 ### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+#### Implementation Phases
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+1. Analyze requirements and design the system architecture.
+2. Develop the Spring Boot backend and REST APIs.
+3. Develop the React frontend.
+4. Deploy Amazon S3, AWS Lambda, Amazon DynamoDB, and AWS IAM.
+5. Integrate AWS services with the backend.
+6. Perform functional testing and finalize the deployment.
 
-### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+#### Technical Requirements
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+**Frontend**
 
-Total: $0.7/month, $8.40/12 months
+- React
+- TypeScript
+- Tailwind CSS
+- Ant Design
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+**Backend**
+
+- Spring Boot
+- Spring Security
+- JWT Authentication
+- AWS SDK for Java
+
+**AWS**
+
+- Amazon S3
+- AWS Lambda (Python + Pillow)
+- Amazon DynamoDB
+- AWS IAM
+- AWS KMS
+- Amazon CloudWatch
+- Amazon SNS
+
+---
+
+### 5. Implementation Timeline and Milestones
+
+- **Week 1:** Requirements analysis and architecture design.
+- **Week 2:** Backend and frontend development.
+- **Week 3:** Deployment of AWS services.
+- **Week 4:** System integration, testing, and final report completion.
+
+---
+
+### 6. Estimated Budget
+
+The primary costs are associated with AWS services.
+
+**Planned Infrastructure**
+
+- Amazon S3
+- AWS Lambda
+- Amazon DynamoDB
+- AWS KMS
+- Amazon CloudWatch
+- Amazon SNS
+
+For educational and testing purposes, the estimated monthly cost is only a few US dollars by taking advantage of the AWS Free Tier and the pay-as-you-go pricing model.
+
+---
 
 ### 7. Risk Assessment
+
 #### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
 
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+- AWS Lambda processing failures.
+- Image upload failures.
+- Exceeding the AWS Free Tier limits.
+- Users uploading unsupported image files.
+- Connectivity issues with AWS services.
 
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+#### Risk Mitigation Strategies
+
+- Use Amazon CloudWatch Logs to monitor AWS Lambda execution and assist with troubleshooting image processing failures.
+- Use Amazon SNS to notify administrators whenever image optimization fails.
+- Validate image formats and file sizes before processing to reduce errors caused by invalid input.
+- Apply IAM roles following the Principle of Least Privilege to improve security.
+- Use AWS KMS to encrypt images stored in Amazon S3.
+
+#### Contingency Plan
+
+- Store metadata and processing status in Amazon DynamoDB to help administrators track processing history and identify failures.
+- Maintain processing logs in Amazon CloudWatch to support troubleshooting and recovery.
+- Back up critical AWS configuration information to facilitate system recovery when necessary.
+
+---
 
 ### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+
+#### Technical Improvements
+
+- Fully automated image optimization workflow.
+- Reduced storage consumption while maintaining image quality.
+- Real-time processing status tracking.
+- Centralized management of processing history.
+
+#### Long-Term Value
+
+The system provides a foundation for developing cloud-based multimedia processing applications. In the future, it can be extended with additional capabilities such as image format conversion, watermarking, AI-based image enhancement, content recognition using Amazon Rekognition, or CDN integration to optimize image delivery.

@@ -1,31 +1,34 @@
 ---
 title: "Workshop"
-date: 2024-01-01
+date: 2026-08-04
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+# Deploying the Automatic Image Optimization System on AWS
 
 #### Overview
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+The **Automatic Image Optimization System** is deployed on the AWS platform to automate image processing and optimization. The solution is built using a serverless architecture, which minimizes infrastructure management, improves scalability, and ensures reliable processing performance as the number of uploaded images increases.
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+In this system, users can upload images through the application. The uploaded images are stored in **Amazon S3**, which automatically triggers an **AWS Lambda** function for image processing. AWS Lambda performs optimization tasks such as image compression, resizing, and generating optimized versions of the uploaded images.
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+The processed images are stored in the S3 Output Bucket, while metadata generated during the processing workflow is stored in **Amazon DynamoDB**. This metadata supports history tracking, processing status monitoring, and image management.
 
-#### Content
+The system also integrates monitoring and security services:
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+- **Amazon CloudWatch:** Monitors Lambda logs, execution status, and performance.
+- **Amazon SNS:** Sends alert notifications to administrators when processing errors occur.
+- **AWS IAM:** Manages permissions between AWS services according to the Principle of Least Privilege.
+- **AWS KMS:** Encrypts stored data to enhance security.
+
+#### Contents
+
+1. [System Architecture Overview](5.1-Workshop-overview/)
+2. [Preparing the AWS Environment](5.2-Prerequiste/)
+3. [Deploying Amazon S3 for Image Storage](5.3-S3-setup/)
+4. [Deploying AWS Lambda for Image Processing](5.4-Lambda-deployment/)
+5. [Deploying Amazon DynamoDB for Metadata Storage](5.5-DynamoDB/)
+6. [Monitoring the System with CloudWatch and SNS](5.6-Monitoring/)
+7. [Cleaning Up AWS Resources After Deployment](5.7-Cleanup/)

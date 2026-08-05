@@ -1,58 +1,34 @@
 ---
 title: "Worklog Tuần 6"
-date: 2024-01-01
-weight: 1
+date: 2026-07-20
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần 6
 
-### Mục tiêu tuần 6:
+* Tích hợp Frontend với Backend J2EE.
+* Xây dựng các Service để giao tiếp với REST API.
+* Hoàn thiện chức năng Upload ảnh từ Frontend.
+* Triển khai chức năng xác thực người dùng bằng Google OAuth.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần này
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Phân tích các REST API do Backend cung cấp.<br>- Thiết lập Axios Instance dùng chung cho toàn bộ dự án.<br>- Xây dựng cấu trúc Service cho từng nhóm chức năng. | 20/07/2026 | 20/07/2026 | Axios Documentation <br> Spring Boot REST API |
+| 3 | - Tích hợp API Upload Image.<br>- Sử dụng FormData để gửi nhiều ảnh đến Backend.<br>- Xử lý dữ liệu trả về sau khi tải ảnh thành công. | 21/07/2026 | 21/07/2026 | MDN FormData |
+| 4 | - Tích hợp các API lấy thông tin Batch và danh sách ảnh.<br>- Hiển thị dữ liệu trên Dashboard và History.<br>- Xử lý trạng thái Loading và thông báo lỗi khi gọi API. | 22/07/2026 | 23/07/2026 | Spring Boot Documentation |
+| 5 | - Tích hợp chức năng đăng nhập bằng Google OAuth.<br>- Cấu hình Google OAuth Client.<br>- Lưu JWT Token và thông tin người dùng sau khi đăng nhập thành công. | 24/07/2026 | 24/07/2026 | Google Identity Documentation |
+| 6 | - Hoàn thiện AuthContext và cơ chế xác thực người dùng.<br>- Kiểm thử toàn bộ luồng đăng nhập và Upload ảnh.<br>- Khắc phục các lỗi phát sinh trong quá trình tích hợp Backend. | 25/07/2026 | 26/07/2026 | React Context API Documentation |
 
+### Kết quả đạt được tuần 6
 
-### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thành việc tích hợp Frontend với Backend J2EE thông qua REST API.
+* Xây dựng thành công lớp Service sử dụng Axios để giao tiếp với Backend.
+* Hoàn thiện chức năng Upload nhiều ảnh bằng FormData.
+* Hiển thị dữ liệu Batch và lịch sử xử lý ảnh từ Backend lên giao diện.
+* Tích hợp thành công chức năng đăng nhập bằng Google OAuth.
+* Xây dựng AuthContext để quản lý JWT Token và thông tin người dùng.
+* Hoàn thiện quy trình xác thực người dùng và chuẩn bị cho giai đoạn kiểm thử hệ thống.

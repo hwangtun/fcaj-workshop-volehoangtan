@@ -1,57 +1,36 @@
 ---
-title: "Week 3 Worklog"
-date: 2024-01-01
-weight: 1
+title: "Worklog Week 3"
+date: 2026-06-29
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Objectives
 
-### Week 3 Objectives:
+* Complete the image processing features on AWS Lambda.
+* Resolve deployment issues related to the Pillow library.
+* Test the automated image processing workflow.
+* Prepare metadata for future system enhancements.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Finish Date | Reference |
+| --- | --- | --- | --- | --- |
+| Mon | - Test AWS Lambda with different image formats.<br>- Verify image resizing and compression functions.<br>- Evaluate output image quality. | 29/06/2026 | 29/06/2026 | AWS Lambda Documentation |
+| Tue | - Troubleshoot Lambda Layer issues when integrating Pillow.<br>- Study the differences between the local development environment and the AWS Lambda runtime.<br>- Experiment with different library packaging methods. | 30/06/2026 | 30/06/2026 | Pillow Documentation |
+| Wed | - Use Docker to build a Lambda Layer compatible with the required Python runtime.<br>- Verify successful Pillow imports in AWS Lambda. | 01/07/2026 | 01/07/2026 | AWS Lambda Layers |
+| Thu | - Complete the thumbnail generation feature.<br>- Store processed images in the Output Bucket.<br>- Verify the folder structure in Amazon S3. | 02/07/2026 | 03/07/2026 | Amazon S3 Documentation |
+| Fri | - Design metadata for image processing records.<br>- Define fields such as Batch ID, Processing ID, processing status and image size.<br>- Summarize system testing results. | 04/07/2026 | 05/07/2026 | AWS Best Practices |
 
+### Results
 
-### Week 3 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Successfully resolved the deployment issues related to the Pillow library on AWS Lambda.
+* Built a Lambda Layer compatible with the AWS Python runtime.
+* Completed the core image processing features:
+  * Image resizing.
+  * Image compression.
+  * Thumbnail generation.
+* Successfully stored processed images in the Amazon S3 Output Bucket.
+* Verified the complete automated processing workflow from Amazon S3 to AWS Lambda.
+* Designed a metadata structure to support image processing history and future database integration.

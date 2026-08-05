@@ -1,18 +1,41 @@
 ---
-title : "Introduction"
-date : 2024-01-01 
-weight : 1 
-chapter : false
-pre : " <b> 5.1. </b> "
+title: "Introduction"
+date: 2026-08-04
+weight: 1
+chapter: false
+pre: " <b> 5.1. </b> "
 ---
 
-#### VPC endpoints
-+ **VPC endpoints** are virtual devices. They are horizontally scaled, redundant, and highly available VPC components. They allow communication between your compute resources and AWS services without imposing availability risks.
-+ Compute resources running in VPC can access  **Amazon S3**  using a Gateway endpoint. PrivateLink interface endpoints can be used by compute resources running in VPC or on-premises.
+#### Introduction to the Automatic Image Optimization System on AWS
 
-#### Workshop overview
-In this workshop, you will use two VPCs. 
-+ **"VPC Cloud"** is for cloud resources such as a  **Gateway endpoint** and an EC2 instance to test with. 
-+ **"VPC On-Prem"** simulates an on-premises environment such as a factory or corporate datacenter. An EC2 instance running strongSwan VPN software has been deployed in "VPC On-prem" and automatically configured to establish a Site-to-Site VPN tunnel with AWS Transit Gateway. This VPN simulates connectivity from an on-premises location to the AWS cloud. To minimize costs, only one VPN instance is provisioned to support this workshop. When planning VPN connectivity for your production workloads, AWS recommends using multiple VPN devices for high availability.
+The **Automatic Image Optimization System** is designed to automate the image optimization process on the AWS cloud platform. The system allows users to upload images, which are then automatically processed to reduce file size, optimize dimensions, and store the optimized results.
+
+The solution leverages AWS's serverless architecture to minimize infrastructure management, improve scalability, and ensure reliable processing of large volumes of images.
+
+The main AWS services used in the system include:
+
+- **Amazon S3:** Stores both the original input images and the optimized output images.
+- **AWS Lambda:** Automatically executes image processing tasks whenever a new image is uploaded to Amazon S3.
+- **Amazon DynamoDB:** Stores processing metadata such as file information, processing status, execution time, and error details.
+- **Amazon CloudWatch:** Monitors logs, tracks Lambda activities, and helps detect errors within the system.
+- **Amazon SNS:** Sends alert notifications to administrators when errors or important events occur.
+- **AWS IAM:** Manages access permissions between AWS services based on the principle of least privilege.
+- **AWS KMS:** Protects data through encryption and secure key management.
+
+### System Architecture Overview
+
+In this system, the image processing workflow is implemented using an event-driven architecture.
+
+- **Input S3 Bucket:** Receives images uploaded by users. When a new object is created, an Amazon S3 event trigger invokes AWS Lambda.
+
+- **AWS Lambda Image Processing:** The Lambda function performs image optimization tasks such as resizing, compressing, and converting image formats according to the selected configuration.
+
+- **Output S3 Bucket:** Stores the processed images, making them available for users to download.
+
+- **Amazon DynamoDB:** Stores metadata for each processing batch, enabling the system to retrieve and track image processing history.
+
+- **Amazon CloudWatch and Amazon SNS:** Monitor the operational status of the system and send alert notifications to administrators whenever errors occur.
+
+- **AWS IAM and AWS KMS:** Ensure that AWS services have only the permissions they require and that data remains protected during storage.
 
 ![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)

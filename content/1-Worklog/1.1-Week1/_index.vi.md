@@ -1,59 +1,38 @@
 ---
 title: "Worklog Tuần 1"
-date: 2024-01-01
+date: 2026-06-15
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần 1
 
-### Mục tiêu tuần 1:
+* Làm quen với môi trường thực tập và quy trình làm việc.
+* Tìm hiểu yêu cầu của dự án **Automatic Image Optimization System**.
+* Nghiên cứu kiến trúc tổng quan và các dịch vụ AWS sẽ sử dụng.
+* Chuẩn bị môi trường phát triển cho dự án.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần này
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Làm quen với môi trường thực tập và quy trình phát triển phần mềm.<br>- Trao đổi với người hướng dẫn về mục tiêu và phạm vi dự án.<br>- Cài đặt các công cụ phục vụ phát triển (Git, VS Code, AWS CLI). | 15/06/2026 | 15/06/2026 | Tài liệu nội bộ |
+| 3 | - Tìm hiểu kiến trúc tổng quan của hệ thống tối ưu hóa ảnh.<br>- Xác định vai trò của Frontend, Backend J2EE và AWS trong hệ thống.<br>- Phân tích luồng xử lý dữ liệu từ người dùng đến AWS. | 16/06/2026 | 16/06/2026 | Tài liệu dự án |
+| 4 | - Nghiên cứu các dịch vụ AWS sẽ sử dụng gồm Amazon S3, AWS Lambda và CloudWatch.<br>- Tìm hiểu nguyên lý hoạt động của Event Trigger trên Amazon S3. | 17/06/2026 | 17/06/2026 | https://docs.aws.amazon.com |
+| 5 | - Tạo và cấu hình tài khoản AWS.<br>- Làm quen với AWS Management Console.<br>- Tìm hiểu cách quản lý tài nguyên trên AWS. | 18/06/2026 | 18/06/2026 | https://docs.aws.amazon.com |
+| 6 | - Thiết kế sơ bộ kiến trúc hệ thống.<br>- Xác định quy trình xử lý ảnh: Upload → Amazon S3 → AWS Lambda → Output Bucket.<br>- Thảo luận các yêu cầu kỹ thuật của dự án. | 19/06/2026 | 20/06/2026 | AWS Architecture Center |
 
+### Kết quả đạt được tuần 1
 
-### Kết quả đạt được tuần 1:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu được mục tiêu, phạm vi và quy trình thực hiện của dự án **Automatic Image Optimization System**.
+* Nắm được kiến trúc tổng quan của hệ thống bao gồm:
+  * Frontend React.
+  * Backend J2EE.
+  * Amazon S3.
+  * AWS Lambda.
+  * CloudWatch.
+* Hoàn thành việc tạo và cấu hình tài khoản AWS.
+* Làm quen với AWS Management Console và AWS CLI.
+* Hiểu được cơ chế kích hoạt AWS Lambda thông qua sự kiện tải ảnh lên Amazon S3.
+* Chuẩn bị đầy đủ môi trường phát triển để bắt đầu triển khai các chức năng của hệ thống trong các tuần tiếp theo.

@@ -1,11 +1,10 @@
 ---
 title: "Worklog Tuần 2"
-date: 2026-06-22
+date: 2026-06-29
 weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-
 
 ### Mục tiêu tuần 2
 
@@ -18,11 +17,11 @@ pre: " <b> 1.2. </b> "
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | - Tạo Amazon S3 Input Bucket và Output Bucket.<br>- Kiểm tra quyền truy cập và cấu hình Bucket.<br>- Thực hiện Upload và Download ảnh để kiểm thử. | 22/06/2026 | 22/06/2026 | https://docs.aws.amazon.com/AmazonS3 |
-| 3 | - Tạo AWS Lambda Function sử dụng Python.<br>- Thực hiện các bài kiểm thử Lambda cơ bản.<br>- Làm quen với CloudWatch Logs để theo dõi quá trình thực thi. | 23/06/2026 | 23/06/2026 | https://docs.aws.amazon.com/lambda |
-| 4 | - Tìm hiểu thư viện Pillow.<br>- Nghiên cứu cách đóng gói thư viện bằng Lambda Layer.<br>- Chuẩn bị môi trường xử lý ảnh trên Lambda. | 24/06/2026 | 24/06/2026 | https://pillow.readthedocs.io |
-| 5 | - Xây dựng chức năng Resize ảnh.<br>- Thực hiện nén ảnh JPEG.<br>- Thiết lập kích thước ảnh đầu ra phù hợp với yêu cầu hệ thống. | 25/06/2026 | 26/06/2026 | AWS Lambda Developer Guide |
-| 6 | - Cấu hình Amazon S3 Event Trigger.<br>- Liên kết S3 với AWS Lambda.<br>- Kiểm thử quy trình Upload → Lambda → Output Bucket. | 27/06/2026 | 28/06/2026 | AWS Documentation |
+| 2 | - Tạo Amazon S3 Input Bucket và Output Bucket.<br>- Kiểm tra quyền truy cập và cấu hình Bucket.<br>- Thực hiện Upload và Download ảnh để kiểm thử. | 29/06/2026 | 29/06/2026 | AWS S3 Documentation |
+| 3 | - Tạo AWS Lambda Function sử dụng Python.<br>- Thực hiện các bài kiểm thử Lambda cơ bản.<br>- Làm quen với CloudWatch Logs để theo dõi quá trình thực thi. | 30/06/2026 | 30/06/2026 | AWS Lambda Documentation |
+| 4 | - Tìm hiểu thư viện Pillow.<br>- Nghiên cứu cách đóng gói thư viện bằng Lambda Layer.<br>- Chuẩn bị môi trường xử lý ảnh trên Lambda. | 01/07/2026 | 01/07/2026 | Pillow Documentation |
+| 5 | - Xây dựng chức năng Resize ảnh.<br>- Thực hiện nén ảnh JPEG.<br>- Thiết lập kích thước ảnh đầu ra theo yêu cầu hệ thống. | 02/07/2026 | 03/07/2026 | AWS Lambda Developer Guide |
+| 6 | - Cấu hình Amazon S3 Event Trigger.<br>- Liên kết S3 với AWS Lambda.<br>- Kiểm thử quy trình Upload → Lambda → Output Bucket. | 04/07/2026 | 05/07/2026 | AWS Documentation |
 
 ### Kết quả đạt được tuần 2
 

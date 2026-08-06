@@ -1,34 +1,35 @@
 ---
 title: "Worklog Week 6"
-date: 2026-07-20
+date: 2026-07-27
 weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
 
-### Objectives
+### Week 6 Objectives
 
-* Integrate the frontend with the J2EE backend.
-* Develop service classes for REST API communication.
-* Complete the image upload feature.
-* Implement Google OAuth authentication.
+* Integrate the Frontend with the Backend through REST APIs.
+* Implement user authentication using Google OAuth.
+* Build a user session management mechanism.
+* Complete the image upload functionality.
 
-### Tasks
+### Tasks Completed This Week
 
-| Day | Task | Start Date | Finish Date | Reference |
+| Day | Task | Start Date | End Date | Reference |
 | --- | --- | --- | --- | --- |
-| Mon | - Analyze the REST APIs provided by the backend.<br>- Configure a shared Axios instance.<br>- Build service classes for API communication. | 20/07/2026 | 20/07/2026 | Axios Documentation <br> Spring Boot REST API |
-| Tue | - Integrate the Image Upload API.<br>- Use FormData to upload multiple images.<br>- Process the backend response after successful uploads. | 21/07/2026 | 21/07/2026 | MDN FormData |
-| Wed | - Integrate Batch and Image History APIs.<br>- Display backend data on Dashboard and History pages.<br>- Handle loading states and API errors. | 22/07/2026 | 23/07/2026 | Spring Boot Documentation |
-| Thu | - Integrate Google OAuth login.<br>- Configure the Google OAuth Client.<br>- Store JWT tokens and user information after successful authentication. | 24/07/2026 | 24/07/2026 | Google Identity Documentation |
-| Fri | - Complete AuthContext and authentication management.<br>- Test the login and image upload workflow.<br>- Resolve issues encountered during backend integration. | 25/07/2026 | 26/07/2026 | React Context API Documentation |
+| Mon | - Analyze REST APIs provided by the Backend.<br>- Build service modules using Axios.<br>- Standardize API communication across the project. | 27/07/2026 | 27/07/2026 | Spring Boot Documentation <br> Axios Documentation |
+| Tue | - Integrate Google OAuth authentication.<br>- Configure Google Identity Services.<br>- Receive the Google ID Token and send it to the Backend for authentication. | 28/07/2026 | 28/07/2026 | Google Identity Documentation |
+| Wed | - Implement AuthContext for authentication state management.<br>- Store JWT tokens and user information after login.<br>- Configure Protected Routes for authenticated pages. | 29/07/2026 | 30/07/2026 | React Context API Documentation |
+| Thu | - Integrate the Image Upload API.<br>- Upload multiple images using FormData.<br>- Include user information in upload requests.<br>- Process Backend responses after upload. | 31/07/2026 | 01/08/2026 | MDN FormData <br> Spring Boot Documentation |
+| Fri | - Test the complete authentication and upload workflow.<br>- Fix issues encountered during Frontend–Backend integration.<br>- Finalize the user authentication process. | 02/08/2026 | 02/08/2026 | Project Documentation |
 
-### Results
+### Week 6 Results
 
-* Successfully integrated the React frontend with the J2EE backend through REST APIs.
-* Developed service classes using Axios for backend communication.
-* Completed the multiple image upload feature using FormData.
-* Displayed batch information and image processing history retrieved from the backend.
+* Successfully integrated the Frontend with the Backend through REST APIs.
+* Implemented service modules using Axios for API communication.
 * Successfully integrated Google OAuth authentication.
-* Implemented AuthContext to manage JWT tokens and user information.
-* Completed the authentication workflow and prepared the system for the final testing and optimization phase.
+* Completed AuthContext for managing JWT tokens and user session information.
+* Applied Protected Routes to secure authenticated pages.
+* Completed multiple image uploads using FormData.
+* Successfully tested the complete login and image upload workflow.
+* Resolved integration issues between the Frontend and Backend.

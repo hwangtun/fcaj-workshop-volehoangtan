@@ -170,7 +170,7 @@ Edit
 
 Add the following environment variable:
 
-| Key | Value |
+| Key            | Value         |
 | -------------- | ------------- |
 | METADATA_TABLE | ImageMetadata |
 
@@ -178,7 +178,7 @@ This variable is used by Lambda to:
 
 - Store metadata in DynamoDB.
 
-![environment-variable](images/5-Workshop/5.4-Lambda-deployment/environment-variable.png)
+![environment-variable](../../../images/5-Workshop/5.4-Lambda-deployment/environment-variable.png)
 
 {{% notice note %}}
 Using Environment Variables separates configuration from the source code, making it easier to change AWS resources without modifying the application.
@@ -242,7 +242,7 @@ This provides Lambda with enough time to:
 - Upload the processed images.
 - Store metadata.
 
-![lambda-resource](images/5-Workshop/5.4-Lambda-deployment/resource.png)
+![lambda-resource](../../../images/5-Workshop/5.4-Lambda-deployment/resource.png)
 
 ---
 
@@ -405,7 +405,7 @@ Execution Role:
 image-optimizer-role
 ```
 
-![lambda-configured](images/5-Workshop/5.4-Lambda-deployment/resource.png)
+![lambda-configured](../../../images/5-Workshop/5.4-Lambda-deployment/resource.png)
 
 ---
 

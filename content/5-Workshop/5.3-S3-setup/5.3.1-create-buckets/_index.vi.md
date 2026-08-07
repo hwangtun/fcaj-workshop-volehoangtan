@@ -66,7 +66,7 @@ Create bucket
 
 để bắt đầu tạo bucket lưu trữ ảnh.
 
-![s3-console](images/5-Workshop/5.3-S3-setup/s3-dashboard.png)
+![s3-console](../../../images/5-Workshop/5.3-S3-setup/s3-dashboard.png)
 
 ---
 
@@ -86,7 +86,7 @@ auto-images-input-bucket
 Tên S3 Bucket phải là duy nhất trên toàn bộ AWS. Nếu tên bucket đã tồn tại, cần thay đổi sang một tên khác.
 {{% /notice %}}
 
-![s3-create-name-bucket](images/5-Workshop/5.3-S3-setup/s3-create-name-bucket.png)
+![s3-create-name-bucket](../../../images/5-Workshop/5.3-S3-setup/s3-create-name-bucket.png)
 
 ---
 
@@ -110,7 +110,7 @@ Block all public access
 Ảnh người dùng tải lên không được public trực tiếp. Việc truy cập ảnh được kiểm soát thông qua Backend API và quyền IAM.
 {{% /notice %}}
 
-![input-bucket-access](images/5-Workshop/5.3-S3-setup/s3-access.png)
+![input-bucket-access](../../../images/5-Workshop/5.3-S3-setup/s3-access.png)
 
 ---
 
@@ -128,29 +128,29 @@ Sau đó chọn KMS Key được tạo cho hệ thống.
 
 Việc sử dụng AWS KMS giúp bảo vệ ảnh gốc khi lưu trữ trên Amazon S3.
 
-![s3-kms-encryption](images/5-Workshop/5.3-S3-setup/open-kms-dashboard.png)
-![s3-kms-encryption](images/5-Workshop/5.3-S3-setup/kms-2.png)
+![s3-kms-encryption](../../../images/5-Workshop/5.3-S3-setup/open-kms-dashboard.png)
+![s3-kms-encryption](../../../images/5-Workshop/5.3-S3-setup/kms-2.png)
 Nhập tên alias:
 
 ```
 image-optimization-kms
 ```
 
-![s3-kms-encryption](images/5-Workshop/5.3-S3-setup/kms-3.png)
+![s3-kms-encryption](../../../images/5-Workshop/5.3-S3-setup/kms-3.png)
 
 Chọn IAM user quản lý hệ thống:
-![s3-kms-encryption](images/5-Workshop/5.3-S3-setup/kms-4.png)
+![s3-kms-encryption](../../../images/5-Workshop/5.3-S3-setup/kms-4.png)
 
 Thêm IAM Role của Lambda:
-![s3-kms-encryption](images/5-Workshop/5.3-S3-setup/kms-5.png)
-![s3-kms-encryption](images/5-Workshop/5.3-S3-setup/kms-6.png)
-![s3-kms-encryption](images/5-Workshop/5.3-S3-setup/kms-7.png)
+![s3-kms-encryption](../../../images/5-Workshop/5.3-S3-setup/kms-5.png)
+![s3-kms-encryption](../../../images/5-Workshop/5.3-S3-setup/kms-6.png)
+![s3-kms-encryption](../../../images/5-Workshop/5.3-S3-setup/kms-7.png)
 
 Chọn KMS Key vừa tạo và nhấn Create bucket:
-![s3-kms-encryption](images/5-Workshop/5.3-S3-setup/kms-8.png)
+![s3-kms-encryption](../../../images/5-Workshop/5.3-S3-setup/kms-8.png)
 
 Vậy là ta đã có Input bucket:
-![create-input-bucket](images/5-Workshop/5.3-S3-setup/create-input-bucket.png)
+![create-input-bucket](../../../images/5-Workshop/5.3-S3-setup/create-input-bucket.png)
 
 ---
 
@@ -186,7 +186,7 @@ thumbnails/
 ```
 
 Vậy là ta đã có Output bucket:
-![create-output-bucket](images/5-Workshop/5.3-S3-setup/create-output-bucket.png)
+![create-output-bucket](../../../images/5-Workshop/5.3-S3-setup/create-output-bucket.png)
 
 ---
 
@@ -199,7 +199,7 @@ Sau khi hoàn tất, trong danh sách Amazon S3 Bucket sẽ hiển thị:
 | auto-images-input-bucket  | Lưu trữ ảnh gốc người dùng tải lên |
 | auto-images-output-bucket | Lưu trữ ảnh đã tối ưu và thumbnail |
 
-![bucket-list](images/5-Workshop/5.3-S3-setup/s3-dashboard.png)
+![bucket-list](../../../images/5-Workshop/5.3-S3-setup/s3-dashboard.png)
 
 ---
 

@@ -31,7 +31,7 @@ Access [AWS Lambda Console](https://console.aws.amazon.com/lambda/)
 
 From the list of Lambda functions, select the image processing function:
 
-![lambda-function](images/5-Workshop/5.3-S3-setup/lambda-function.png)
+![lambda-function](../../../images/5-Workshop/5.3-S3-setup/lambda-function.png)
 
 ---
 
@@ -39,7 +39,7 @@ From the list of Lambda functions, select the image processing function:
 
 In the Lambda interface, select Function overview, then click Add trigger.
 
-![add-trigger](images/5-Workshop/5.3-S3-setup/add-trigger.png)
+![add-trigger](../../../images/5-Workshop/5.3-S3-setup/add-trigger.png)
 
 ---
 
@@ -47,7 +47,7 @@ In the Lambda interface, select Function overview, then click Add trigger.
 
 In the **Trigger configuration**, select Amazon S3 as the trigger source:
 
-![select-s3-trigger](images/5-Workshop/5.3-S3-setup/select-s3-trigger.png)
+![select-s3-trigger](../../../images/5-Workshop/5.3-S3-setup/select-s3-trigger.png)
 
 ---
 
@@ -67,7 +67,7 @@ All object create events
 
 This event is triggered whenever a new object is created in the bucket.
 
-![s3-trigger-config](images/5-Workshop/5.3-S3-setup/s3-trigger-config.png)
+![s3-trigger-config](../../../images/5-Workshop/5.3-S3-setup/s3-trigger-config.png)
 
 ---
 
@@ -132,7 +132,7 @@ s3.amazonaws.com
     lambda:InvokeFunction
 ```
 
-![lambda-permission](images/5-Workshop/5.3-S3-setup/lambda-permission.png)
+![lambda-permission](../../../images/5-Workshop/5.3-S3-setup/lambda-permission.png)
 
 ---
 
@@ -140,7 +140,7 @@ s3.amazonaws.com
 
 After the configuration is completed successfully, the connection will be displayed in the **Function overview** section of the Lambda function:
 
-![trigger-complete](images/5-Workshop/5.3-S3-setup/trigger-complete.png)
+![trigger-complete](../../../images/5-Workshop/5.3-S3-setup/trigger-complete.png)
 
 ---
 

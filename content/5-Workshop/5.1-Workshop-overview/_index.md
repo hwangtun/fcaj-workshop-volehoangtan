@@ -38,4 +38,4 @@ In this system, the image processing workflow is implemented using an event-driv
 
 - **AWS IAM and AWS KMS:** Ensure that AWS services have only the permissions they require and that data remains protected during storage.
 
-![overview](images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+![overview](../../images/5-Workshop/5.1-Workshop-overview/kientruc.jpg)

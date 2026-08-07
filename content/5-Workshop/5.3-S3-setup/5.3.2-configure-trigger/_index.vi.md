@@ -31,7 +31,7 @@ Truy cập [AWS Lambda Console](https://console.aws.amazon.com/lambda/)
 
 Trong danh sách Lambda function, chọn function xử lý ảnh:
 
-![lambda-function](images/5-Workshop/5.3-S3-setup/lambda-function.png)
+![lambda-function](../../../images/5-Workshop/5.3-S3-setup/lambda-function.png)
 
 ---
 
@@ -39,7 +39,7 @@ Trong danh sách Lambda function, chọn function xử lý ảnh:
 
 Trong giao diện Lambda, chọn Function overview, sau đó click Add trigger:
 
-![add-trigger](images/5-Workshop/5.3-S3-setup/add-trigger.png)
+![add-trigger](../../../images/5-Workshop/5.3-S3-setup/add-trigger.png)
 
 ---
 
@@ -47,7 +47,7 @@ Trong giao diện Lambda, chọn Function overview, sau đó click Add trigger:
 
 Trong phần **Trigger configuration**, chọn nguồn trigger Amazon S3:
 
-![select-s3-trigger](images/5-Workshop/5.3-S3-setup/select-s3-trigger.png)
+![select-s3-trigger](../../../images/5-Workshop/5.3-S3-setup/select-s3-trigger.png)
 
 ---
 
@@ -67,7 +67,7 @@ All object create events
 
 Sự kiện này sẽ được kích hoạt mỗi khi có một object mới được tạo trong bucket.
 
-![s3-trigger-config](images/5-Workshop/5.3-S3-setup/s3-trigger-config.png)
+![s3-trigger-config](../../../images/5-Workshop/5.3-S3-setup/s3-trigger-config.png)
 
 ---
 
@@ -132,7 +132,7 @@ s3.amazonaws.com
     lambda:InvokeFunction
 ```
 
-![lambda-permission](images/5-Workshop/5.3-S3-setup/lambda-permission.png)
+![lambda-permission](../../../images/5-Workshop/5.3-S3-setup/lambda-permission.png)
 
 ---
 
@@ -140,7 +140,7 @@ s3.amazonaws.com
 
 Sau khi cấu hình thành công, trong phần **Function overview** của Lambda sẽ hiển thị kết nối:
 
-![trigger-complete](images/5-Workshop/5.3-S3-setup/trigger-complete.png)
+![trigger-complete](../../../images/5-Workshop/5.3-S3-setup/trigger-complete.png)
 
 ---
 

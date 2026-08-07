@@ -75,7 +75,7 @@ Trong danh sách Tables, chọn:
 ImageMetadata
 ```
 
-![dynamodb-table](images/5-Workshop/5.5-DynamoDB/dynamodb-table.png)
+![dynamodb-table](../../../images/5-Workshop/5.5-DynamoDB/dynamodb-table.png)
 
 ---
 
@@ -97,8 +97,8 @@ Scan
 
 để xem các item đang được lưu trữ.
 
-![explore-items](images/5-Workshop/5.5-DynamoDB/press-explore.png)
-![explore-items](images/5-Workshop/5.5-DynamoDB/explore-items.png)
+![explore-items](../../../images/5-Workshop/5.5-DynamoDB/press-explore.png)
+![explore-items](../../../images/5-Workshop/5.5-DynamoDB/explore-items.png)
 
 ---
 

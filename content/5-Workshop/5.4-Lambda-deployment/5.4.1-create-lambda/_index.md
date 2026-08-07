@@ -37,7 +37,7 @@ Create function
 
 to create a new Lambda function.
 
-![lambda-console](images/5-Workshop/5.4-Lambda-deployment/lambda-console.png)
+![lambda-console](../../../images/5-Workshop/5.4-Lambda-deployment/lambda-console.png)
 
 ---
 
@@ -51,7 +51,7 @@ Author from scratch
 
 This option creates a Lambda function using source code developed specifically for the system.
 
-![author-from-scratch](images/5-Workshop/5.4-Lambda-deployment/author-from-scratch.png)
+![author-from-scratch](../../../images/5-Workshop/5.4-Lambda-deployment/author-from-scratch.png)
 
 ---
 
@@ -69,7 +69,7 @@ autoImageProcessing
 
 This name is used to identify the image processing function in the system.
 
-![function-name](images/5-Workshop/5.4-Lambda-deployment/function-name.png)
+![function-name](../../../images/5-Workshop/5.4-Lambda-deployment/function-name.png)
 
 ---
 
@@ -86,9 +86,9 @@ The Lambda function uses Python for image processing with the following librarie
 - boto3: interacts with AWS services.
 - Pillow (PIL): processes and optimizes images.
 
-![lambda-runtime](images/5-Workshop/5.4-Lambda-deployment/lambda-runtime.png)
+![lambda-runtime](../../../images/5-Workshop/5.4-Lambda-deployment/lambda-runtime.png)
 
-![create-function](images/5-Workshop/5.4-Lambda-deployment/create-function.png)
+![create-function](../../../images/5-Workshop/5.4-Lambda-deployment/create-function.png)
 
 ---
 

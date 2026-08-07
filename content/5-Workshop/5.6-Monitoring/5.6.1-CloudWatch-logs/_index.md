@@ -27,7 +27,7 @@ Open:
 AWS Management Console
 ```
 
-![AWSConsole](images/5-Workshop/5.6-Monitoring/sns-notification/aws_console.jpg)
+![AWSConsole](../../../images/5-Workshop/5.6-Monitoring/sns-notification/aws_console.jpg)
 
 Search for the service:
 
@@ -35,7 +35,7 @@ Search for the service:
 CloudWatch
 ```
 
-![AWSConsole](images/5-Workshop/5.6-Monitoring/cloudwatch-logs/aws_search_cw.jpg)
+![AWSConsole](../../../images/5-Workshop/5.6-Monitoring/cloudwatch-logs/aws_search_cw.jpg)
 
 In the left navigation panel, select:
 
@@ -45,7 +45,7 @@ Logs
     +--> Log groups
 ```
 
-![cloudwatch-console](images/5-Workshop/5.6-Monitoring/cloudwatch-logs/aws_console.jpg)
+![cloudwatch-console](../../../images/5-Workshop/5.6-Monitoring/cloudwatch-logs/aws_console.jpg)
 
 ---
 
@@ -61,7 +61,7 @@ Select the Log Group:
 
 This Log Group contains all logs generated during Lambda execution.
 
-![log-group](images/5-Workshop/5.6-Monitoring/sns-notification/cw_log.jpg)
+![log-group](../../../images/5-Workshop/5.6-Monitoring/sns-notification/cw_log.jpg)
 
 ---
 
@@ -85,7 +85,7 @@ Example:
 2026/08/04/[$LATEST]xxxxxxxx
 ```
 
-![log-stream](images/5-Workshop/5.6-Monitoring/cloudwatch-logs/log_stream.jpg)
+![log-stream](../../../images/5-Workshop/5.6-Monitoring/cloudwatch-logs/log_stream.jpg)
 
 ---
 
@@ -127,7 +127,7 @@ Important information:
 | Saving metadata  | Save metadata to DynamoDB    |
 | END              | Lambda execution completed   |
 
-![execution-log](images/5-Workshop/5.6-Monitoring/cloudwatch-logs/log_event.jpg)
+![execution-log](../../../images/5-Workshop/5.6-Monitoring/cloudwatch-logs/log_event.jpg)
 
 ---
 
@@ -146,7 +146,7 @@ Exception:
 Unsupported image format
 ```
 
-![Log-Error](images/5-Workshop/5.6-Monitoring/cloudwatch-logs/cw_log_error.jpg)
+![Log-Error](../../../images/5-Workshop/5.6-Monitoring/cloudwatch-logs/cw_log_error.jpg)
 
 Errors that can be detected:
 
@@ -203,7 +203,7 @@ Saving metadata to DynamoDB
 END RequestId
 ```
 
-![Log](images/5-Workshop/5.6-Monitoring/cloudwatch-logs/log_success.jpg)
+![Log](../../../images/5-Workshop/5.6-Monitoring/cloudwatch-logs/log_success.jpg)
 
 This confirms:
 

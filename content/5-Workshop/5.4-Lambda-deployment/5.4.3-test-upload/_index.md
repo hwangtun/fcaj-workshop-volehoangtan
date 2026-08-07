@@ -78,7 +78,7 @@ Example response after a successful upload:
 
 This indicates that the Backend has received the request and started the image processing workflow.
 
-![upload-image](images/5-Workshop/5.4-Lambda-deployment/upload-image.png)
+![upload-image](../../../images/5-Workshop/5.4-Lambda-deployment/upload-image.png)
 
 ---
 
@@ -97,7 +97,7 @@ uploads/
       └── test-image.jpg
 ```
 
-![test-upload-image](images/5-Workshop/5.4-Lambda-deployment/test-upload-image.png)
+![test-upload-image](../../../images/5-Workshop/5.4-Lambda-deployment/test-upload-image.png)
 
 ---
 
@@ -154,11 +154,11 @@ AWS Lambda
  → View CloudWatch Logs
 ```
 
-![lambda-log](images/5-Workshop/5.4-Lambda-deployment/lambda-log.png)
+![lambda-log](../../../images/5-Workshop/5.4-Lambda-deployment/lambda-log.png)
 
 If the Lambda function executes successfully, CloudWatch Logs will display the processing workflow, and the final log entry will indicate successful execution.
 
-![success-log](images/5-Workshop/5.4-Lambda-deployment/success-log.png)
+![success-log](../../../images/5-Workshop/5.4-Lambda-deployment/success-log.png)
 
 ---
 
@@ -184,8 +184,8 @@ thumbnails/
             └── test-image.webp
 ```
 
-![output-image-1](images/5-Workshop/5.4-Lambda-deployment/output-image-1.png)
-![output-image-2](images/5-Workshop/5.4-Lambda-deployment/output-image-2.png)
+![output-image-1](../../../images/5-Workshop/5.4-Lambda-deployment/output-image-1.png)
+![output-image-2](../../../images/5-Workshop/5.4-Lambda-deployment/output-image-2.png)
 
 Verify that:
 
@@ -280,16 +280,16 @@ Possible error scenarios include:
 
 After completing the testing process, the system produces the following results:
 
-| Component | Result |
-| ----------------------------------------- | ---------- |
-| Upload image through the Backend | Success |
-| Upload image to the Input S3 Bucket | Success |
+| Component                                           | Result  |
+| --------------------------------------------------- | ------- |
+| Upload image through the Backend                    | Success |
+| Upload image to the Input S3 Bucket                 | Success |
 | Backend creates the initial metadata (`PROCESSING`) | Success |
-| S3 Event Notification triggers Lambda | Success |
-| Lambda processes the image | Success |
-| Optimized image is stored in the Output S3 Bucket | Success |
-| Thumbnail is generated | Success |
-| Lambda updates the metadata in DynamoDB | Success |
-| Processing logs are stored in CloudWatch | Success |
+| S3 Event Notification triggers Lambda               | Success |
+| Lambda processes the image                          | Success |
+| Optimized image is stored in the Output S3 Bucket   | Success |
+| Thumbnail is generated                              | Success |
+| Lambda updates the metadata in DynamoDB             | Success |
+| Processing logs are stored in CloudWatch            | Success |
 
 The test results demonstrate that the system operates according to the designed architecture. After a user uploads an image, the Backend stores the image in the Input S3 Bucket and creates the initial metadata in DynamoDB. The S3 Event Notification triggers AWS Lambda to process the image, save the processed output to the Output S3 Bucket, and update the metadata in DynamoDB. This workflow ensures that image processing is fully automated while allowing the processing status of each image to be tracked through the database.

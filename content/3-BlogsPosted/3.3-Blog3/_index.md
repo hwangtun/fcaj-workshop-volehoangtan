@@ -1,26 +1,24 @@
 ---
-title: "Blog 3"
-date: 2024-01-01
-weight: 1
+title: "AWS CDK – Infrastructure as Code for Modern Cloud Infrastructure"
+date: 2026-08-04
+weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-
-#  AWS CDK – Infrastructure as Code for Modern Cloud Infrastructure
+# AWS CDK – Infrastructure as Code for Modern Cloud Infrastructure
 
 During my internship and while learning about Infrastructure as Code (IaC) on AWS, I published a technical blog about AWS Cloud Development Kit (AWS CDK) on the AWS Study Group community. The blog introduces AWS CDK as a powerful framework for defining, managing, and deploying cloud infrastructure using code, enabling greater automation and more efficient infrastructure management for AWS projects.
 
 The main topics covered in the blog include:
 
-* An introduction to Infrastructure as Code (IaC) and the role of AWS CDK in provisioning and managing AWS infrastructure.
-* An explanation of the infrastructure deployment workflow using cdk synth, cdk diff, and cdk deploy, along with the relationship between AWS CDK and AWS CloudFormation.
-* The key advantages of AWS CDK, including infrastructure version control with Git, environment reproducibility, code reusability, and seamless integration with CI/CD pipelines.
-* Best practices for using AWS CDK, such as avoiding direct modifications through the AWS Management Console to prevent Infrastructure Drift, running cdk diff before deployment, and organizing infrastructure into multiple Stacks and Constructs for better maintainability and reusability.
-* An architecture diagram illustrating the AWS CDK deployment workflow, from application source code to AWS CloudFormation and the provisioned AWS resources.
+- An introduction to Infrastructure as Code (IaC) and the role of AWS CDK in provisioning and managing AWS infrastructure.
+- An explanation of the infrastructure deployment workflow using cdk synth, cdk diff, and cdk deploy, along with the relationship between AWS CDK and AWS CloudFormation.
+- The key advantages of AWS CDK, including infrastructure version control with Git, environment reproducibility, code reusability, and seamless integration with CI/CD pipelines.
+- Best practices for using AWS CDK, such as avoiding direct modifications through the AWS Management Console to prevent Infrastructure Drift, running cdk diff before deployment, and organizing infrastructure into multiple Stacks and Constructs for better maintainability and reusability.
+- An architecture diagram illustrating the AWS CDK deployment workflow, from application source code to AWS CloudFormation and the provisioned AWS resources.
 
 Through this blog, I gained a deeper understanding of the Infrastructure as Code (IaC) approach and strengthened my knowledge of AWS CDK as well as infrastructure automation practices on the AWS Cloud.
-
 
 ## Blog Link
 

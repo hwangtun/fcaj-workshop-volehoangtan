@@ -1,11 +1,10 @@
 ---
-title: "Blog 3"
-date: 2024-01-01
-weight: 1
+title: "AWS CDK – Infrastructure as Code cho hạ tầng đám mây hiện đại"
+date: 2026-08-04
+weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-
 
 # AWS CDK – Infrastructure as Code cho hạ tầng đám mây hiện đại
 
@@ -13,14 +12,13 @@ Trong quá trình thực tập và tìm hiểu về Infrastructure as Code (IaC)
 
 Các nội dung chính của bài viết gồm:
 
-* Giới thiệu khái niệm Infrastructure as Code (IaC) và vai trò của AWS CDK trong việc quản lý hạ tầng trên AWS.
-* Giải thích quy trình triển khai hạ tầng bằng AWS CDK thông qua các lệnh cdk synth, cdk diff và cdk deploy, đồng thời làm rõ mối quan hệ giữa AWS CDK và AWS CloudFormation.
-* Phân tích những ưu điểm của AWS CDK như quản lý hạ tầng bằng mã nguồn, hỗ trợ kiểm soát phiên bản với Git, dễ dàng tái tạo môi trường triển khai và tích hợp với các quy trình CI/CD.
-* Trình bày một số Best Practices khi sử dụng AWS CDK, bao gồm hạn chế thay đổi trực tiếp trên AWS Management Console để tránh Infrastructure Drift, sử dụng cdk diff trước khi triển khai và tổ chức hạ tầng thành nhiều Stack hoặc Construct nhằm tăng khả năng bảo trì và tái sử dụng.
-* Minh họa quy trình triển khai hạ tầng bằng AWS CDK từ mã nguồn đến AWS CloudFormation và các tài nguyên AWS.
+- Giới thiệu khái niệm Infrastructure as Code (IaC) và vai trò của AWS CDK trong việc quản lý hạ tầng trên AWS.
+- Giải thích quy trình triển khai hạ tầng bằng AWS CDK thông qua các lệnh cdk synth, cdk diff và cdk deploy, đồng thời làm rõ mối quan hệ giữa AWS CDK và AWS CloudFormation.
+- Phân tích những ưu điểm của AWS CDK như quản lý hạ tầng bằng mã nguồn, hỗ trợ kiểm soát phiên bản với Git, dễ dàng tái tạo môi trường triển khai và tích hợp với các quy trình CI/CD.
+- Trình bày một số Best Practices khi sử dụng AWS CDK, bao gồm hạn chế thay đổi trực tiếp trên AWS Management Console để tránh Infrastructure Drift, sử dụng cdk diff trước khi triển khai và tổ chức hạ tầng thành nhiều Stack hoặc Construct nhằm tăng khả năng bảo trì và tái sử dụng.
+- Minh họa quy trình triển khai hạ tầng bằng AWS CDK từ mã nguồn đến AWS CloudFormation và các tài nguyên AWS.
 
 Bài viết giúp em hiểu rõ hơn về phương pháp triển khai hạ tầng theo mô hình Infrastructure as Code, đồng thời nâng cao kiến thức về AWS CDK và quy trình tự động hóa trong việc quản lý tài nguyên trên nền tảng AWS.
-
 
 ## Link bài viết
 

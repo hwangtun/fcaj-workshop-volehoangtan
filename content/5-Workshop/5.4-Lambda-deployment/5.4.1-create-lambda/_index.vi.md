@@ -41,7 +41,7 @@ Create function
 
 để tạo Lambda Function mới.
 
-![lambda-console](images/5-Workshop/5.4-Lambda-deployment/lambda-console.png)
+![lambda-console](../../../images/5-Workshop/5.4-Lambda-deployment/lambda-console.png)
 
 ---
 
@@ -57,7 +57,7 @@ Author from scratch
 
 Đây là phương thức tạo Lambda function từ source code được phát triển riêng cho hệ thống.
 
-![author-from-scratch](images/5-Workshop/5.4-Lambda-deployment/author-from-scratch.png)
+![author-from-scratch](../../../images/5-Workshop/5.4-Lambda-deployment/author-from-scratch.png)
 
 ---
 
@@ -77,7 +77,7 @@ autoImageProcessing
 
 Tên này được sử dụng để định danh function xử lý ảnh trong hệ thống.
 
-![function-name](images/5-Workshop/5.4-Lambda-deployment/function-name.png)
+![function-name](../../../images/5-Workshop/5.4-Lambda-deployment/function-name.png)
 
 ---
 
@@ -96,9 +96,9 @@ Lambda sử dụng Python để xử lý ảnh với các thư viện:
 - boto3: tương tác với các dịch vụ AWS.
 - Pillow (PIL): xử lý và tối ưu hình ảnh.
 
-![lambda-runtime](images/5-Workshop/5.4-Lambda-deployment/lambda-runtime.png)
+![lambda-runtime](../../../images/5-Workshop/5.4-Lambda-deployment/lambda-runtime.png)
 
-![create-function](images/5-Workshop/5.4-Lambda-deployment/create-function.png)
+![create-function](../../../images/5-Workshop/5.4-Lambda-deployment/create-function.png)
 
 ---
 

@@ -23,7 +23,7 @@ Through this blog, I strengthened my understanding of Amazon SQS and gained deep
 
 ## Illustration
 
-![overview](images/3-BlogsPosted/blog_1.png)
+![overview](/images/3-BlogsPosted/blog_1.png)
 
 ## Blog Link
 [Read the article on AWS Study Group](https://www.facebook.com/groups/660548818043427/?multi_permalinks=2234076147357345&hoisted_section_header_type=recently_seen&__cft__[0]=AZbn73yW8KNKYQgwxHrpiV3agA4I1MOTX3p8eQ7Sj0V-jexe8G1iLBdySt-X0l7HN4mNckwnvLGcs2ttzAa0OoZ-Zr0OO51kfS2EaKSoOkRsbjxodd2ztOzZVpeqhruT95_EuG5pssrW3WjsCjhjKhlt6qNfKYial3JlxO6VesbUg8RUNPmOy3wq100eG2LrZjE&__tn__=%2CO%2CP-R)

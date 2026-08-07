@@ -21,7 +21,7 @@ Bài viết giúp em củng cố kiến thức về Amazon SQS cũng như hiểu
 
 ## Hình minh họa
 
-![overview](images/3-BlogsPosted/blog_1.png)
+![overview](/images/3-BlogsPosted/blog_1.png)
 
 ## Link bài viết
 

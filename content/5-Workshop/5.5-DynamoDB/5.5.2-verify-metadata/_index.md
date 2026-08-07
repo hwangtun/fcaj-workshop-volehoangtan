@@ -77,7 +77,7 @@ From the Tables list, select:
 ImageMetadata
 ```
 
-![dynamodb-table](/images/5-Workshop/5.5-DynamoDB/dynamodb-table.png)
+![dynamodb-table](images/5-Workshop/5.5-DynamoDB/dynamodb-table.png)
 
 ---
 
@@ -99,8 +99,8 @@ Scan
 
 to view stored items.
 
-![explore-items](/images/5-Workshop/5.5-DynamoDB/press-explore.png)
-![explore-items](/images/5-Workshop/5.5-DynamoDB/explore-items.png)
+![explore-items](images/5-Workshop/5.5-DynamoDB/press-explore.png)
+![explore-items](images/5-Workshop/5.5-DynamoDB/explore-items.png)
 
 ---
 

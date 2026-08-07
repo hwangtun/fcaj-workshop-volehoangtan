@@ -58,21 +58,21 @@ Mở:
 AWS Management Console
 ```
 
-![AWSConsole](/images/5-Workshop/5.6-Monitoring/sns-notification/aws_console.jpg)
+![AWSConsole](images/5-Workshop/5.6-Monitoring/sns-notification/aws_console.jpg)
 Tìm kiếm dịch vụ:
 
 ```
 Simple Notification Service (SNS)
 ```
 
-![AWSConsole](/images/5-Workshop/5.6-Monitoring/sns-notification/search_sns.jpg)
+![AWSConsole](images/5-Workshop/5.6-Monitoring/sns-notification/search_sns.jpg)
 Trong thanh điều hướng bên trái chọn:
 
 ```
 Topics
 ```
 
-![SNSConsole](/images/5-Workshop/5.6-Monitoring/sns-notification/sns_step1.jpg)
+![SNSConsole](images/5-Workshop/5.6-Monitoring/sns-notification/sns_step1.jpg)
 Sau đó chọn:
 
 ```
@@ -81,7 +81,7 @@ Create topic
 
 để tạo SNS Topic mới.
 
-![SNSConsole](/images/5-Workshop/5.6-Monitoring/sns-notification/sns_step2.jpg)
+![SNSConsole](images/5-Workshop/5.6-Monitoring/sns-notification/sns_step2.jpg)
 
 ---
 
@@ -123,7 +123,7 @@ Image Processing Alert
 
 Giúp dễ dàng nhận biết mục đích của Topic.
 
-![create-topic](/images/5-Workshop/5.6-Monitoring/sns-notification/create_topic.jpg)
+![create-topic](images/5-Workshop/5.6-Monitoring/sns-notification/create_topic.jpg)
 
 ---
 
@@ -163,7 +163,7 @@ Sau đó chọn:
 Create subscription
 ```
 
-![create-subscription](/images/5-Workshop/5.6-Monitoring/sns-notification/create_sub.jpg)
+![create-subscription](images/5-Workshop/5.6-Monitoring/sns-notification/create_sub.jpg)
 
 ---
 
@@ -177,7 +177,7 @@ Mở email và chọn:
 Confirm subscription
 ```
 
-![Mail](/images/5-Workshop/5.6-Monitoring/sns-notification/mail_confirm.jpg)
+![Mail](images/5-Workshop/5.6-Monitoring/sns-notification/mail_confirm.jpg)
 
 Sau khi xác nhận, trạng thái Subscription sẽ chuyển thành:
 
@@ -185,7 +185,7 @@ Sau khi xác nhận, trạng thái Subscription sẽ chuyển thành:
 Confirmed
 ```
 
-![confirm-subscription](/images/5-Workshop/5.6-Monitoring/sns-notification/sub_confirm.jpg)
+![confirm-subscription](images/5-Workshop/5.6-Monitoring/sns-notification/sub_confirm.jpg)
 
 ---
 
@@ -211,7 +211,7 @@ Status:
 Confirmed
 ```
 
-![topic-created](/images/5-Workshop/5.6-Monitoring/sns-notification/sub_status.jpg)
+![topic-created](images/5-Workshop/5.6-Monitoring/sns-notification/sub_status.jpg)
 
 ---
 
@@ -227,7 +227,7 @@ Truy cập:
 Amazon CloudWatch
 ```
 
-![loudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/cw_console.jpg)
+![loudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/cw_console.jpg)
 
 Chọn:
 
@@ -236,7 +236,7 @@ Alarms
     └── Create alarm
 ```
 
-![CloudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/create_alarm.jpg)
+![CloudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/create_alarm.jpg)
 
 ---
 
@@ -251,7 +251,7 @@ Lambda
                     └── Errors
 ```
 
-![CloudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/metric_lambda.jpg)
+![CloudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/metric_lambda.jpg)
 
 ---
 
@@ -269,7 +269,7 @@ Condition
 Errors >= 1
 ```
 
-![CloudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/alarm_condition.jpg)
+![CloudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/alarm_condition.jpg)
 
 ---
 
@@ -281,7 +281,7 @@ Trong phần **Notifications**, chọn SNS Topic đã tạo trước đó:
 image-processing-alerts
 ```
 
-![CloudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/cw_sns_select.jpg)
+![CloudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/cw_sns_select.jpg)
 
 ---
 
@@ -295,7 +295,7 @@ Sau khi tạo thành công, Alarm sẽ ở trạng thái:
 OK
 ```
 
-![CloudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/alarm_name.jpg)
+![CloudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/alarm_name.jpg)
 
 Khi Lambda Function phát sinh lỗi, quy trình xử lý sẽ diễn ra như sau:
 
@@ -345,7 +345,7 @@ Log groups
 /aws/lambda/image-optimizer-lambda
 ```
 
-![CloudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/cw_log.jpg)
+![CloudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/cw_log.jpg)
 
 CloudWatch sẽ ghi nhận thông tin lỗi, ví dụ:
 
@@ -355,7 +355,7 @@ ERROR
 Image processing failed
 ```
 
-![CloudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/cw_log_error.jpg)
+![CloudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/cw_log_error.jpg)
 
 ---
 
@@ -401,7 +401,7 @@ Status:
 FAILED
 ```
 
-![SNS](/images/5-Workshop/5.6-Monitoring/sns-email.jpg)
+![SNS](images/5-Workshop/5.6-Monitoring/sns-email.jpg)
 
 Kết quả cho thấy hệ thống đã tự động phát hiện lỗi của Lambda Function và gửi thông báo thành công thông qua Amazon SNS.
 

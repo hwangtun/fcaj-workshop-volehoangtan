@@ -22,7 +22,7 @@ During the development process, the team used an IAM User with permissions for t
 
 For the Production environment, it is recommended to apply the **Principle of Least Privilege**, granting only the permissions required for each service to enhance the security of the system.
 
-![iam](/images/5-Workshop/5.2-Prerequisite/iam_policy.png)
+![iam](images/5-Workshop/5.2-Prerequisite/iam_policy.png)
 
 <!-- <center>
 Figure 5.2.1: Custom IAM Policy configured with the necessary access permissions based on the Principle of Least Privilege
@@ -55,7 +55,7 @@ Create two Amazon S3 Buckets for the image processing workflow:
 
 After completing the creation process, verify the list of Buckets in the Amazon S3 Console.
 
-![s3](/images/5-Workshop/5.2-Prerequisite/s3-buckets.png)
+![s3](images/5-Workshop/5.2-Prerequisite/s3-buckets.png)
 
 ---
 
@@ -79,7 +79,7 @@ In addition, the table stores the following information:
 - uploadedAt
 - processedAt
 
-![dynamodb](/images/5-Workshop/5.2-Prerequisite/dynamodb.png)
+![dynamodb](images/5-Workshop/5.2-Prerequisite/dynamodb.png)
 
 ---
 
@@ -87,7 +87,7 @@ In addition, the table stores the following information:
 
 Create an IAM Role for AWS Lambda and grant the necessary permissions so that the Lambda function can interact with AWS services during the image processing workflow. The IAM Role includes permissions to read from and write to Amazon S3, write metadata to Amazon DynamoDB, and send logs to Amazon CloudWatch. If AWS KMS encryption or direct notifications through Amazon SNS are used, the corresponding permissions should also be added to the Role. After the Role has been created, assign it as the Execution Role for the Lambda Function.
 
-![iam-role](/images/5-Workshop/5.2-Prerequisite/iam-role-for-lambda.png)
+![iam-role](images/5-Workshop/5.2-Prerequisite/iam-role-for-lambda.png)
 
 ---
 

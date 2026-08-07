@@ -62,15 +62,15 @@ Follow these steps:
 
 1. Open the **Amazon S3 Console**.
 
-![s3](/images/5-Workshop/5.7-Cleanup/s3_console.jpg)
+![s3](images/5-Workshop/5.7-Cleanup/s3_console.jpg)
 
 2. Select the bucket to delete.
 
-![s3](/images/5-Workshop/5.7-Cleanup/s3_bucket_select.jpg)
+![s3](images/5-Workshop/5.7-Cleanup/s3_bucket_select.jpg)
 
 3. Select all objects in the bucket.
 
-![s3](/images/5-Workshop/5.7-Cleanup/s3_object.jpg)
+![s3](images/5-Workshop/5.7-Cleanup/s3_object.jpg)
 
 4. Select:
 
@@ -80,7 +80,7 @@ Delete
 
 5. Confirm the deletion of all objects.
 
-![s3](/images/5-Workshop/5.7-Cleanup/s3_delete_confirm.jpg)
+![s3](images/5-Workshop/5.7-Cleanup/s3_delete_confirm.jpg)
 
 {{% notice warning %}}
 Carefully review the data before deletion. Once objects are deleted from Amazon S3, they may not be recoverable.
@@ -98,7 +98,7 @@ Select:
 Delete bucket
 ```
 
-![s3](/images/5-Workshop/5.7-Cleanup/s3_delete_bucket.jpg)
+![s3](images/5-Workshop/5.7-Cleanup/s3_delete_bucket.jpg)
 
 Enter the bucket name to confirm the deletion.
 
@@ -120,7 +120,7 @@ Open:
 AWS Lambda Console
 ```
 
-![Lambda](/images/5-Workshop/5.7-Cleanup/s3_lambda_console.jpg)
+![Lambda](images/5-Workshop/5.7-Cleanup/s3_lambda_console.jpg)
 
 Select the function:
 
@@ -128,7 +128,7 @@ Select the function:
 image-optimizer-lambda
 ```
 
-![Lambda](/images/5-Workshop/5.7-Cleanup/s3_lambda_select.jpg)
+![Lambda](images/5-Workshop/5.7-Cleanup/s3_lambda_select.jpg)
 
 Then choose:
 
@@ -137,7 +137,7 @@ Actions
     └── Delete function
 ```
 
-![Lambda](/images/5-Workshop/5.7-Cleanup/s3_lambda_delete_confirm.jpg)
+![Lambda](images/5-Workshop/5.7-Cleanup/s3_lambda_delete_confirm.jpg)
 
 After confirmation, the Lambda function will be removed from the system.
 
@@ -151,7 +151,7 @@ Open:
 Amazon DynamoDB
 ```
 
-![DynamoDB](/images/5-Workshop/5.7-Cleanup/db_console.jpg)
+![DynamoDB](images/5-Workshop/5.7-Cleanup/db_console.jpg)
 
 Select the table:
 
@@ -159,7 +159,7 @@ Select the table:
 ImageMetadata
 ```
 
-![DynamoDB](/images/5-Workshop/5.7-Cleanup/db_select.jpg)
+![DynamoDB](images/5-Workshop/5.7-Cleanup/db_select.jpg)
 
 Choose:
 
@@ -169,7 +169,7 @@ Delete table
 
 Confirm the operation:
 
-![DynamoDB](/images/5-Workshop/5.7-Cleanup/db_delete_confirm.jpg)
+![DynamoDB](images/5-Workshop/5.7-Cleanup/db_delete_confirm.jpg)
 
 ```text
 Delete
@@ -189,7 +189,7 @@ Open:
 Amazon CloudWatch
 ```
 
-![CloudWatch](/images/5-Workshop/5.7-Cleanup/cw_console.jpg)
+![CloudWatch](images/5-Workshop/5.7-Cleanup/cw_console.jpg)
 
 Select:
 
@@ -198,11 +198,11 @@ Logs
     └── Log groups
 ```
 
-![CloudWatch](/images/5-Workshop/5.7-Cleanup/cw_select.jpg)
+![CloudWatch](images/5-Workshop/5.7-Cleanup/cw_select.jpg)
 
 Delete the log group:
 
-![CloudWatch](/images/5-Workshop/5.7-Cleanup/cw_log_delete.jpg)
+![CloudWatch](images/5-Workshop/5.7-Cleanup/cw_log_delete.jpg)
 
 ```text
 /aws/lambda/image-optimizer-lambda
@@ -218,7 +218,7 @@ Open:
 Amazon SNS
 ```
 
-![SNS](/images/5-Workshop/5.7-Cleanup/sns_console.jpg)
+![SNS](images/5-Workshop/5.7-Cleanup/sns_console.jpg)
 
 Select the topic:
 
@@ -226,7 +226,7 @@ Select the topic:
 image-processing-alerts
 ```
 
-![SNS](/images/5-Workshop/5.7-Cleanup/sns_select.jpg)
+![SNS](images/5-Workshop/5.7-Cleanup/sns_select.jpg)
 
 Choose:
 
@@ -234,7 +234,7 @@ Choose:
 Delete topic
 ```
 
-![SNS](/images/5-Workshop/5.7-Cleanup/sns_delete_confirm.jpg)
+![SNS](images/5-Workshop/5.7-Cleanup/sns_delete_confirm.jpg)
 
 After the topic is deleted, all subscriptions associated with it will also be removed.
 
@@ -266,7 +266,7 @@ Open:
 AWS Billing Console
 ```
 
-![Billing](/images/5-Workshop/5.7-Cleanup/aws_bill.jpg)
+![Billing](images/5-Workshop/5.7-Cleanup/aws_bill.jpg)
 
 Review the following services:
 

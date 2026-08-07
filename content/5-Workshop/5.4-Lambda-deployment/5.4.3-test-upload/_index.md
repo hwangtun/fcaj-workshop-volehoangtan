@@ -78,7 +78,7 @@ Example response after a successful upload:
 
 This indicates that the Backend has received the request and started the image processing workflow.
 
-![upload-image](/images/5-Workshop/5.4-Lambda-deployment/upload-image.png)
+![upload-image](images/5-Workshop/5.4-Lambda-deployment/upload-image.png)
 
 ---
 
@@ -97,7 +97,7 @@ uploads/
       └── test-image.jpg
 ```
 
-![test-upload-image](/images/5-Workshop/5.4-Lambda-deployment/test-upload-image.png)
+![test-upload-image](images/5-Workshop/5.4-Lambda-deployment/test-upload-image.png)
 
 ---
 
@@ -154,11 +154,11 @@ AWS Lambda
  → View CloudWatch Logs
 ```
 
-![lambda-log](/images/5-Workshop/5.4-Lambda-deployment/lambda-log.png)
+![lambda-log](images/5-Workshop/5.4-Lambda-deployment/lambda-log.png)
 
 If the Lambda function executes successfully, CloudWatch Logs will display the processing workflow, and the final log entry will indicate successful execution.
 
-![success-log](/images/5-Workshop/5.4-Lambda-deployment/success-log.png)
+![success-log](images/5-Workshop/5.4-Lambda-deployment/success-log.png)
 
 ---
 
@@ -184,8 +184,8 @@ thumbnails/
             └── test-image.webp
 ```
 
-![output-image-1](/images/5-Workshop/5.4-Lambda-deployment/output-image-1.png)
-![output-image-2](/images/5-Workshop/5.4-Lambda-deployment/output-image-2.png)
+![output-image-1](images/5-Workshop/5.4-Lambda-deployment/output-image-1.png)
+![output-image-2](images/5-Workshop/5.4-Lambda-deployment/output-image-2.png)
 
 Verify that:
 

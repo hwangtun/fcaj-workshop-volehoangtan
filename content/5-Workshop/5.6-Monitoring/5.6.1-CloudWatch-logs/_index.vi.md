@@ -25,14 +25,14 @@ Mở:
 AWS Management Console
 ```
 
-![AWSConsole](/images/5-Workshop/5.6-Monitoring/sns-notification/aws_console.jpg)
+![AWSConsole](images/5-Workshop/5.6-Monitoring/sns-notification/aws_console.jpg)
 Tìm kiếm dịch vụ:
 
 ```
 CloudWatch
 ```
 
-![AWSConsole](/images/5-Workshop/5.6-Monitoring/cloudwatch-logs/aws_search_cw.jpg)
+![AWSConsole](images/5-Workshop/5.6-Monitoring/cloudwatch-logs/aws_search_cw.jpg)
 Trong thanh điều hướng bên trái, chọn:
 
 ```
@@ -41,7 +41,7 @@ Logs
     +--> Log groups
 ```
 
-![cloudwatch-console](/images/5-Workshop/5.6-Monitoring/cloudwatch-logs/aws_console.jpg)
+![cloudwatch-console](images/5-Workshop/5.6-Monitoring/cloudwatch-logs/aws_console.jpg)
 
 ---
 
@@ -57,7 +57,7 @@ Chọn Log Group:
 
 Log Group này chứa toàn bộ log được sinh ra trong quá trình Lambda thực thi.
 
-![log-group](/images/5-Workshop/5.6-Monitoring/sns-notification/cw_log.jpg)
+![log-group](images/5-Workshop/5.6-Monitoring/sns-notification/cw_log.jpg)
 
 ---
 
@@ -81,7 +81,7 @@ Ví dụ:
 2026/08/04/[$LATEST]xxxxxxxx
 ```
 
-![log-stream](/images/5-Workshop/5.6-Monitoring/cloudwatch-logs/log_stream.jpg)
+![log-stream](images/5-Workshop/5.6-Monitoring/cloudwatch-logs/log_stream.jpg)
 
 ---
 
@@ -123,7 +123,7 @@ Các thông tin quan trọng:
 | Saving metadata  | Lưu dữ liệu vào DynamoDB  |
 | END              | Lambda hoàn thành         |
 
-![execution-log](/images/5-Workshop/5.6-Monitoring/cloudwatch-logs/log_event.jpg)
+![execution-log](images/5-Workshop/5.6-Monitoring/cloudwatch-logs/log_event.jpg)
 
 ---
 
@@ -142,7 +142,7 @@ Exception:
 Unsupported image format
 ```
 
-![Log-Error](/images/5-Workshop/5.6-Monitoring/cloudwatch-logs/cw_log_error.jpg)
+![Log-Error](images/5-Workshop/5.6-Monitoring/cloudwatch-logs/cw_log_error.jpg)
 Các lỗi có thể phát hiện:
 
 - File ảnh không hợp lệ.
@@ -198,7 +198,7 @@ Saving metadata to DynamoDB
 END RequestId
 ```
 
-![Log](/images/5-Workshop/5.6-Monitoring/cloudwatch-logs/log_success.jpg)
+![Log](images/5-Workshop/5.6-Monitoring/cloudwatch-logs/log_success.jpg)
 Điều này xác nhận:
 
 - S3 Trigger gọi Lambda thành công.

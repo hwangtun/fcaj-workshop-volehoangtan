@@ -107,8 +107,8 @@ Participating in **"FCAJ Cloud Architect"** event was an engaging and rewarding 
 
 #### Some event photos
 *Add your event photos here*  
-![](/images/event-img/img001.JPG)
-![](/images/event-img/img002.JPG)
-![](/images/event-img/img003.JPG)
+![](images/event-img/img001.JPG)
+![](images/event-img/img002.JPG)
+![](images/event-img/img003.JPG)
 
 > Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.

@@ -62,15 +62,15 @@ Thực hiện theo các bước sau:
 
 1. Truy cập **Amazon S3 Console**.
 
-![s3](/images/5-Workshop/5.7-Cleanup/s3_console.jpg)
+![s3](images/5-Workshop/5.7-Cleanup/s3_console.jpg)
 
 2. Chọn Bucket cần xóa.
 
-![s3](/images/5-Workshop/5.7-Cleanup/s3_bucket_select.jpg)
+![s3](images/5-Workshop/5.7-Cleanup/s3_bucket_select.jpg)
 
 3. Chọn toàn bộ các Object trong Bucket.
 
-![s3](/images/5-Workshop/5.7-Cleanup/s3_object.jpg)
+![s3](images/5-Workshop/5.7-Cleanup/s3_object.jpg)
 
 4. Chọn:
 
@@ -80,7 +80,7 @@ Delete
 
 5. Xác nhận xóa toàn bộ dữ liệu.
 
-![s3](/images/5-Workshop/5.7-Cleanup/s3_delete_confirm.jpg)
+![s3](images/5-Workshop/5.7-Cleanup/s3_delete_confirm.jpg)
 
 {{% notice warning %}}
 Hãy kiểm tra kỹ dữ liệu trước khi xóa. Sau khi Object trong Amazon S3 bị xóa, dữ liệu có thể không thể khôi phục.
@@ -98,7 +98,7 @@ Chọn:
 Delete bucket
 ```
 
-![s3](/images/5-Workshop/5.7-Cleanup/s3_delete_bucket.jpg)
+![s3](images/5-Workshop/5.7-Cleanup/s3_delete_bucket.jpg)
 
 Nhập tên Bucket để xác nhận thao tác xóa.
 
@@ -120,7 +120,7 @@ Truy cập:
 AWS Lambda Console
 ```
 
-![Lambda](/images/5-Workshop/5.7-Cleanup/s3_lambda_console.jpg)
+![Lambda](images/5-Workshop/5.7-Cleanup/s3_lambda_console.jpg)
 
 Chọn Function:
 
@@ -128,7 +128,7 @@ Chọn Function:
 image-optimizer-lambda
 ```
 
-![Lambda](/images/5-Workshop/5.7-Cleanup/s3_lambda_select.jpg)
+![Lambda](images/5-Workshop/5.7-Cleanup/s3_lambda_select.jpg)
 
 Tiếp theo chọn:
 
@@ -137,7 +137,7 @@ Actions
     └── Delete function
 ```
 
-![Lambda](/images/5-Workshop/5.7-Cleanup/s3_lambda_delete_confirm.jpg)
+![Lambda](images/5-Workshop/5.7-Cleanup/s3_lambda_delete_confirm.jpg)
 
 Sau khi xác nhận, Lambda Function sẽ được xóa khỏi hệ thống.
 
@@ -151,7 +151,7 @@ Truy cập:
 Amazon DynamoDB
 ```
 
-![DynamoDB](/images/5-Workshop/5.7-Cleanup/db_console.jpg)
+![DynamoDB](images/5-Workshop/5.7-Cleanup/db_console.jpg)
 
 Chọn bảng:
 
@@ -159,7 +159,7 @@ Chọn bảng:
 ImageMetadata
 ```
 
-![DynamoDB](/images/5-Workshop/5.7-Cleanup/db_select.jpg)
+![DynamoDB](images/5-Workshop/5.7-Cleanup/db_select.jpg)
 
 Chọn:
 
@@ -169,7 +169,7 @@ Delete table
 
 Xác nhận thao tác:
 
-![DynamoDB](/images/5-Workshop/5.7-Cleanup/db_delete_confirm.jpg)
+![DynamoDB](images/5-Workshop/5.7-Cleanup/db_delete_confirm.jpg)
 
 ```text
 Delete
@@ -189,7 +189,7 @@ Truy cập:
 Amazon CloudWatch
 ```
 
-![CloudWatch](/images/5-Workshop/5.7-Cleanup/cw_console.jpg)
+![CloudWatch](images/5-Workshop/5.7-Cleanup/cw_console.jpg)
 
 Chọn:
 
@@ -198,11 +198,11 @@ Logs
     └── Log groups
 ```
 
-![CloudWatch](/images/5-Workshop/5.7-Cleanup/cw_select.jpg)
+![CloudWatch](images/5-Workshop/5.7-Cleanup/cw_select.jpg)
 
 Xóa Log Group:
 
-![CloudWatch](/images/5-Workshop/5.7-Cleanup/cw_log_delete.jpg)
+![CloudWatch](images/5-Workshop/5.7-Cleanup/cw_log_delete.jpg)
 
 ```text
 /aws/lambda/image-optimizer-lambda
@@ -218,7 +218,7 @@ Truy cập:
 Amazon SNS
 ```
 
-![SNS](/images/5-Workshop/5.7-Cleanup/sns_console.jpg)
+![SNS](images/5-Workshop/5.7-Cleanup/sns_console.jpg)
 
 Chọn Topic:
 
@@ -226,7 +226,7 @@ Chọn Topic:
 image-processing-alerts
 ```
 
-![SNS](/images/5-Workshop/5.7-Cleanup/sns_select.jpg)
+![SNS](images/5-Workshop/5.7-Cleanup/sns_select.jpg)
 
 Chọn:
 
@@ -234,7 +234,7 @@ Chọn:
 Delete topic
 ```
 
-![SNS](/images/5-Workshop/5.7-Cleanup/sns_delete_confirm.jpg)
+![SNS](images/5-Workshop/5.7-Cleanup/sns_delete_confirm.jpg)
 
 Sau khi Topic bị xóa, các Subscription liên kết với Topic này cũng sẽ bị xóa.
 
@@ -266,7 +266,7 @@ Truy cập:
 AWS Billing Console
 ```
 
-![Billing](/images/5-Workshop/5.7-Cleanup/aws_bill.jpg)
+![Billing](images/5-Workshop/5.7-Cleanup/aws_bill.jpg)
 
 Kiểm tra các dịch vụ sau:
 

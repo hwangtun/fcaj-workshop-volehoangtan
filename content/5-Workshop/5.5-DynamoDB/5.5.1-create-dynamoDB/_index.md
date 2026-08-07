@@ -91,7 +91,7 @@ Create table
 
 to create a new DynamoDB table.
 
-![dynamodb-console](/images/5-Workshop/5.5-DynamoDB/dynamodb-console.png)
+![dynamodb-console](images/5-Workshop/5.5-DynamoDB/dynamodb-console.png)
 
 ---
 
@@ -188,7 +188,7 @@ Sort Key:
 processingId
 ```
 
-![table-key](/images/5-Workshop/5.5-DynamoDB/table-key.png)
+![table-key](images/5-Workshop/5.5-DynamoDB/table-key.png)
 
 ---
 
@@ -202,7 +202,7 @@ Create table
 
 AWS creates the table.
 
-![create-table](/images/5-Workshop/5.5-DynamoDB/create-table.png)
+![create-table](images/5-Workshop/5.5-DynamoDB/create-table.png)
 
 ---
 

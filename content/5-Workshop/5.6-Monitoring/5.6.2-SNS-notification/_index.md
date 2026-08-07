@@ -60,7 +60,7 @@ Open:
 AWS Management Console
 ```
 
-![AWSConsole](/images/5-Workshop/5.6-Monitoring/sns-notification/aws_console.jpg)
+![AWSConsole](images/5-Workshop/5.6-Monitoring/sns-notification/aws_console.jpg)
 
 Search for the service:
 
@@ -68,7 +68,7 @@ Search for the service:
 Simple Notification Service (SNS)
 ```
 
-![AWSConsole](/images/5-Workshop/5.6-Monitoring/sns-notification/search_sns.jpg)
+![AWSConsole](images/5-Workshop/5.6-Monitoring/sns-notification/search_sns.jpg)
 
 In the left navigation panel, select:
 
@@ -76,7 +76,7 @@ In the left navigation panel, select:
 Topics
 ```
 
-![SNSConsole](/images/5-Workshop/5.6-Monitoring/sns-notification/sns_step1.jpg)
+![SNSConsole](images/5-Workshop/5.6-Monitoring/sns-notification/sns_step1.jpg)
 
 Then select:
 
@@ -86,7 +86,7 @@ Create topic
 
 to create a new SNS Topic.
 
-![SNSConsole](/images/5-Workshop/5.6-Monitoring/sns-notification/sns_step2.jpg)
+![SNSConsole](images/5-Workshop/5.6-Monitoring/sns-notification/sns_step2.jpg)
 
 ---
 
@@ -128,7 +128,7 @@ Image Processing Alert
 
 This helps easily identify the purpose of the Topic.
 
-![create-topic](/images/5-Workshop/5.6-Monitoring/sns-notification/create_topic.jpg)
+![create-topic](images/5-Workshop/5.6-Monitoring/sns-notification/create_topic.jpg)
 
 ---
 
@@ -168,7 +168,7 @@ Then select:
 Create subscription
 ```
 
-![create-subscription](/images/5-Workshop/5.6-Monitoring/sns-notification/create_sub.jpg)
+![create-subscription](images/5-Workshop/5.6-Monitoring/sns-notification/create_sub.jpg)
 
 ---
 
@@ -182,7 +182,7 @@ Open the email and select:
 Confirm subscription
 ```
 
-![Mail](/images/5-Workshop/5.6-Monitoring/sns-notification/mail_confirm.jpg)
+![Mail](images/5-Workshop/5.6-Monitoring/sns-notification/mail_confirm.jpg)
 
 After confirmation, the Subscription status changes to:
 
@@ -190,7 +190,7 @@ After confirmation, the Subscription status changes to:
 Confirmed
 ```
 
-![confirm-subscription](/images/5-Workshop/5.6-Monitoring/sns-notification/sub_confirm.jpg)
+![confirm-subscription](images/5-Workshop/5.6-Monitoring/sns-notification/sub_confirm.jpg)
 
 ---
 
@@ -216,7 +216,7 @@ Status:
 Confirmed
 ```
 
-![topic-created](/images/5-Workshop/5.6-Monitoring/sns-notification/sub_status.jpg)
+![topic-created](images/5-Workshop/5.6-Monitoring/sns-notification/sub_status.jpg)
 
 ---
 
@@ -232,7 +232,7 @@ Access:
 Amazon CloudWatch
 ```
 
-![loudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/cw_console.jpg)
+![loudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/cw_console.jpg)
 
 Select:
 
@@ -241,7 +241,7 @@ Alarms
     └── Create alarm
 ```
 
-![CloudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/create_alarm.jpg)
+![CloudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/create_alarm.jpg)
 
 ---
 
@@ -256,7 +256,7 @@ Lambda
                     └── Errors
 ```
 
-![CloudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/metric_lambda.jpg)
+![CloudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/metric_lambda.jpg)
 
 ---
 
@@ -274,7 +274,7 @@ Condition
 Errors >= 1
 ```
 
-![CloudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/alarm_condition.jpg)
+![CloudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/alarm_condition.jpg)
 
 ---
 
@@ -286,7 +286,7 @@ In the **Notifications** section, select the previously created SNS Topic:
 image-processing-alerts
 ```
 
-![CloudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/cw_sns_select.jpg)
+![CloudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/cw_sns_select.jpg)
 
 ---
 
@@ -300,7 +300,7 @@ After successful creation, the Alarm status will be:
 OK
 ```
 
-![CloudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/alarm_name.jpg)
+![CloudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/alarm_name.jpg)
 
 When the Lambda Function generates an error, the processing flow is:
 
@@ -350,7 +350,7 @@ Log groups
 /aws/lambda/image-optimizer-lambda
 ```
 
-![CloudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/cw_log.jpg)
+![CloudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/cw_log.jpg)
 
 CloudWatch records error information, for example:
 
@@ -360,7 +360,7 @@ ERROR
 Image processing failed
 ```
 
-![CloudWatch](/images/5-Workshop/5.6-Monitoring/sns-notification/cw_log_error.jpg)
+![CloudWatch](images/5-Workshop/5.6-Monitoring/sns-notification/cw_log_error.jpg)
 
 ---
 
@@ -406,7 +406,7 @@ Status:
 FAILED
 ```
 
-![SNS](/images/5-Workshop/5.6-Monitoring/sns-email.jpg)
+![SNS](images/5-Workshop/5.6-Monitoring/sns-email.jpg)
 
 The result shows that the system can automatically detect Lambda Function errors and successfully send notifications through Amazon SNS.
 

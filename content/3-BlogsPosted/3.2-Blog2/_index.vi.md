@@ -23,7 +23,7 @@ Bài viết giúp em củng cố kiến thức về Event-Driven Architecture, �
 
 ## Hình minh họa
 
-![overview](/images/3-BlogsPosted/blog_2.png)
+![overview](images/3-BlogsPosted/blog_2.png)
 ## Link bài viết
 
 [Xem bài viết trên AWS Study Group](https://www.facebook.com/groups/660548818043427/?multi_permalinks=2234610517303908&hoisted_section_header_type=recently_seen&__cft__[0]=AZbyhAyUCRN5R-so0NeOjpWZ6P1Gq8ep_R31jElXlmFrUF1zkq8VjubmawbC2b3ysSHBCTVgzddnmyNLL0vE4WY0SfFNP_SXVKj00pJeUBhYksXEE4SzzRESwWhReqqlhWJX9OA9jXDoP3IJPMw97Ut-tKIqCEHL-MNOzNqmEfNae2cZRlZtsy6PpRjq8fpc8PA&__tn__=%2CO%2CP-R)

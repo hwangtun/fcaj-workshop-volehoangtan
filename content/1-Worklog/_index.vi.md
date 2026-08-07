@@ -1,12 +1,12 @@
 ---
 title: "Nhật ký công việc"
-date: 2026-06-15
+date: 2026-06-22
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
-Trong thời gian thực tập tại **Công ty TNHH Amazon Web Services Viet Nam** từ **15/06/2026** đến **15/08/2026**, tôi đã tham gia phát triển dự án **Automatic Image Optimization System**. Dự án được xây dựng trên nền tảng **AWS Cloud**, kết hợp giữa **Frontend (React + TypeScript)**, **Backend (Spring Boot/J2EE)** và các dịch vụ của **Amazon Web Services** như **Amazon S3**, **AWS Lambda**, **IAM**, **CloudWatch** và **Google OAuth**.
+Trong thời gian thực tập tại **Công ty TNHH Amazon Web Services Viet Nam** từ **22/06/2026** đến **15/08/2026**, tôi đã tham gia phát triển dự án **Automatic Image Optimization System**. Dự án được xây dựng trên nền tảng **AWS Cloud**, kết hợp giữa **Frontend (React + TypeScript)**, **Backend (Spring Boot/J2EE)** và các dịch vụ của **Amazon Web Services** như **Amazon S3**, **AWS Lambda**, **IAM**, **CloudWatch** và **Google OAuth**.
 
 Trong suốt quá trình thực tập, tôi từng bước tìm hiểu công nghệ, triển khai các chức năng của hệ thống, tích hợp giữa Frontend và Backend, kiểm thử, tối ưu và hoàn thiện sản phẩm. Nội dung công việc được ghi lại theo từng tuần như sau:
 

@@ -1,12 +1,12 @@
 ---
 title: "Work Log"
-date: 2026-06-15
+date: 2026-06-22
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
-During my internship at **Amazon Web Services Vietnam Co., Ltd.** from **June 15, 2026** to **August 15, 2026**, I participated in the development of the **Automatic Image Optimization System**. The project was built on the **AWS Cloud** platform and combined **Frontend development (React + TypeScript)**, **Backend development (Spring Boot/J2EE)**, and various **Amazon Web Services**, including **Amazon S3**, **AWS Lambda**, **IAM**, **CloudWatch**, and **Google OAuth**.
+During my internship at **Amazon Web Services Vietnam Co., Ltd.** from **June 22, 2026** to **August 15, 2026**, I participated in the development of the **Automatic Image Optimization System**. The project was built on the **AWS Cloud** platform and combined **Frontend development (React + TypeScript)**, **Backend development (Spring Boot/J2EE)**, and various **Amazon Web Services**, including **Amazon S3**, **AWS Lambda**, **IAM**, **CloudWatch**, and **Google OAuth**.
 
 Throughout the internship, I gradually explored the technologies involved, implemented the system's core features, integrated the frontend with the backend, performed testing, optimized the application, and completed the final product. The work completed during each week is summarized below:
 

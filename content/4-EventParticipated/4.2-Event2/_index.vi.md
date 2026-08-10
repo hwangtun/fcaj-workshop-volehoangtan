@@ -10,161 +10,151 @@ pre: " <b> 4.2. </b> "
 
 ## Mục Đích Của Sự Kiện
 
--Tìm hiểu các tính năng nâng cao của Amazon Bedrock AgentCore.
--Hiểu cách xây dựng AI Agent có khả năng ghi nhớ ngữ cảnh và cá nhân hóa trải nghiệm người dùng.
--Nắm được các công cụ đánh giá, giám sát và tối ưu hóa AI Agent trong quá trình vận hành.
--Thực hành sử dụng các thành phần của AgentCore để xây dựng và đánh giá một AI Agent.
+- Tìm hiểu các tính năng nâng cao của **Amazon Bedrock AgentCore**.
+- Xây dựng AI Agent có khả năng ghi nhớ ngữ cảnh và cá nhân hóa trải nghiệm người dùng.
+- Nắm vững các công cụ đánh giá, giám sát và tối ưu hóa AI Agent trong môi trường thực tế.
+- Thực hành sử dụng các thành phần cốt lõi của **AgentCore** để phát triển và triển khai AI Agent.
 
 ## Danh Sách Diễn Giả
 
-- **Giuseppe Marazzotta** - Head of Technology, AWS
-- Các team đã tham gia AABW.
+- **Nghia Tran** – Agentic SA
+- **Anh Pham** – Cloud Consultant, G-Asia Pacific Vietnam
 
-## Nội Dung Nổi Bật
+---
 
-### Amazon Bedrock AgentCore L300
-Buổi học tập trung vào các tính năng nâng cao của AgentCore nhằm giúp AI Agent hoạt động hiệu quả hơn trong môi trường thực tế.
-Memory cho phép AI Agent lưu trữ và sử dụng thông tin từ các cuộc hội thoại trước để tạo ra trải nghiệm mang tính cá nhân hóa.
+# Nội Dung Nổi Bật
+
+## Amazon Bedrock AgentCore L300
+
+Buổi học tập trung vào những khả năng quan trọng giúp đưa AI Agent từ giai đoạn phát triển sang môi trường Production.
+
+### Memory
+
+Memory giúp AI Agent lưu trữ ngữ cảnh của các cuộc hội thoại, bao gồm bộ nhớ ngắn hạn và dài hạn, từ đó tạo ra trải nghiệm mang tính cá nhân hóa.
 
 Thông qua Memory, Agent có thể:
 
-- Ghi nhớ sở thích và thông tin của người dùng.
-- Duy trì ngữ cảnh trong các cuộc hội thoại dài.
+- Ghi nhớ thông tin và sở thích của người dùng.
+- Duy trì ngữ cảnh giữa nhiều cuộc hội thoại.
+- Hạn chế việc người dùng phải cung cấp lại cùng một thông tin.
 - Đưa ra phản hồi phù hợp hơn dựa trên lịch sử tương tác.
-- Giảm việc người dùng phải lặp lại cùng một thông tin nhiều lần.
 
-Tính năng này đặc biệt hữu ích đối với các chatbot chăm sóc khách hàng, trợ lý cá nhân hoặc hệ thống hỗ trợ nội bộ doanh nghiệp.
+Đây là thành phần quan trọng đối với các chatbot chăm sóc khách hàng, trợ lý ảo và các hệ thống AI trong doanh nghiệp.
 
 ### Evaluations
 
-AgentCore Evaluations hỗ trợ đánh giá chất lượng hoạt động của AI Agent thông qua nhiều tiêu chí khác nhau.
+AgentCore Evaluations cung cấp cơ chế đánh giá chất lượng hoạt động của AI Agent dựa trên nhiều tiêu chí khác nhau.
 
-Một số nội dung được giới thiệu gồm:
+Một số khả năng nổi bật gồm:
 
 - Đánh giá độ chính xác của câu trả lời.
-- Kiểm tra mức độ hoàn thành yêu cầu của người dùng.
-- So sánh kết quả giữa nhiều phiên bản Prompt hoặc Agent.
-- Hỗ trợ xác định những điểm cần cải thiện trước khi triển khai vào môi trường Production.
+- Đánh giá mức độ hữu ích (Helpfulness).
+- So sánh nhiều phiên bản Prompt hoặc Agent.
+- Sử dụng Judge Model để tự động chấm điểm kết quả.
 
-Nhờ đó, quá trình phát triển AI Agent trở nên có cơ sở dữ liệu thay vì chỉ đánh giá bằng cảm nhận.
+Nhờ đó, việc cải tiến AI Agent được thực hiện dựa trên dữ liệu thay vì chỉ dựa vào đánh giá chủ quan.
 
 ### Observability
 
-Observability giúp theo dõi toàn bộ quá trình xử lý của AI Agent.
+Observability giúp theo dõi toàn bộ quá trình hoạt động của AI Agent.
 
-Các thông tin có thể quan sát bao gồm:
+Các thông tin có thể quan sát gồm:
 
-- Luồng thực hiện của Agent.
-- Thời gian xử lý từng bước.
-- Các Tool được Agent gọi.
-- Token sử dụng.
-- Lỗi phát sinh trong quá trình thực thi.
+- Log của Agent.
+- Trace quá trình xử lý.
+- Metrics về hiệu năng.
+- Luồng thực thi của Agent.
+- Các lỗi phát sinh trong quá trình xử lý.
 
-Thông tin này giúp việc phân tích, gỡ lỗi và tối ưu hiệu năng của Agent trở nên dễ dàng hơn.
+Điều này giúp việc phân tích, gỡ lỗi và tối ưu hiệu năng của hệ thống trở nên dễ dàng hơn.
 
 ---
 
 # AgentCore Components
 
-Ngoài các tính năng chính, buổi học còn giới thiệu các thành phần quan trọng trong AgentCore.
+Ngoài ba tính năng chính, buổi học còn giới thiệu nhiều thành phần quan trọng của AgentCore.
 
 ## Registry
 
-Registry đóng vai trò quản lý các Agent, Tool và tài nguyên được sử dụng trong hệ thống.
+Registry là nơi quản lý tập trung các AI Agent, Tool và Skill.
 
-Nhờ Registry, việc tái sử dụng các thành phần và quản lý phiên bản của Agent trở nên thuận tiện hơn.
+Nhờ Registry, các thành phần có thể được tái sử dụng giữa nhiều dự án, giúp giảm thời gian phát triển và dễ dàng quản lý phiên bản.
 
 ## Harness
 
-Harness là môi trường dùng để kiểm thử AI Agent trước khi đưa vào triển khai thực tế.
+Harness là môi trường hỗ trợ việc xây dựng và kiểm thử AI Agent.
 
-Thông qua Harness có thể:
+Thông qua Harness, nhà phát triển có thể:
 
-- Chạy nhiều bộ dữ liệu kiểm thử.
-- So sánh kết quả giữa các phiên bản Agent.
-- Đánh giá chất lượng sau khi thay đổi Prompt hoặc cấu hình.
+- Thiết lập nhanh môi trường thử nghiệm.
+- Chạy các bộ kiểm thử.
+- So sánh kết quả giữa nhiều phiên bản Agent.
 
-Điều này giúp giảm rủi ro khi triển khai hệ thống AI vào môi trường Production.
+Điều này giúp giảm rủi ro trước khi triển khai vào môi trường Production.
 
 ## Tools
 
-AgentCore hỗ trợ tích hợp nhiều Tool để mở rộng khả năng của AI Agent.
+AgentCore hỗ trợ tích hợp nhiều công cụ mở rộng để tăng khả năng của AI Agent.
 
 Ví dụ:
 
-- Truy vấn cơ sở dữ liệu.
-- Gọi API bên ngoài.
-- Thực hiện các phép tính.
-- Đọc tài liệu hoặc dữ liệu doanh nghiệp.
+- Browser Tool.
+- Code Interpreter.
+- Payment Tool.
+- Các API và dịch vụ bên ngoài.
 
 Nhờ đó Agent không chỉ tạo văn bản mà còn có thể thực hiện các tác vụ thực tế.
 
-## Payments
+## Policy
 
-Payments hỗ trợ quản lý việc sử dụng tài nguyên và theo dõi chi phí khi Agent gọi các dịch vụ AI hoặc Tool bên ngoài.
+Policy cho phép thiết lập các quy tắc quản trị bằng ngôn ngữ **Seda**.
 
-Việc theo dõi chi phí giúp doanh nghiệp kiểm soát ngân sách và tối ưu quá trình vận hành.
+Các Policy giúp:
+
+- Kiểm soát quyền truy cập.
+- Giới hạn hành vi của Agent.
+- Đảm bảo yêu cầu về bảo mật.
+- Tuân thủ quy định của doanh nghiệp.
 
 ## Optimization
 
-Optimization cung cấp các cơ chế tối ưu hiệu suất AI Agent.
+Optimization tập trung vào việc cải thiện hiệu năng của AI Agent.
 
 Bao gồm:
 
 - Giảm độ trễ phản hồi.
 - Tối ưu Prompt.
 - Giảm chi phí sử dụng mô hình.
-- Cải thiện chất lượng câu trả lời.
-
-## Policy
-
-Policy giúp thiết lập các quy tắc quản trị AI Agent.
-
-Ví dụ:
-
-- Kiểm soát quyền truy cập.
-- Giới hạn hành vi của Agent.
-- Thiết lập các quy định về bảo mật.
-- Đảm bảo Agent tuân thủ chính sách của doanh nghiệp.
+- Nâng cao chất lượng phản hồi.
 
 ---
 
 # Hands-on Lab
 
-Trong phần thực hành, tôi đã được trải nghiệm các tính năng của AgentCore.
+Trong phần thực hành, người tham gia được trải nghiệm các tính năng quan trọng của AgentCore.
 
-## Thêm Memory cho AI Agent
+## Cấu hình Memory
 
-Thực hiện cấu hình Memory để Agent có khả năng ghi nhớ thông tin giữa các phiên làm việc.
+Thực hiện tích hợp Memory để AI Agent có thể ghi nhớ thông tin giữa nhiều phiên làm việc.
 
 Qua đó có thể quan sát sự khác biệt giữa Agent có Memory và Agent không sử dụng Memory.
 
-## Khám phá Agent Observability
+## Quan sát Agent
 
-Theo dõi quá trình xử lý của Agent thông qua công cụ Observability.
+Sử dụng công cụ Observability để theo dõi quá trình **Invoke** của Agent.
 
-Có thể xem:
+Có thể quan sát:
 
-- Các bước Agent thực hiện.
-- Thời gian xử lý.
-- Tool được sử dụng.
-- Thông tin phục vụ việc phân tích và gỡ lỗi.
+- Luồng xử lý.
+- Các bước Reasoning.
+- Log và Trace.
+- Thời gian thực thi.
 
-## Đánh giá Agent bằng AgentCore Evaluations
+## Kiểm thử AI Agent
 
-Sử dụng Evaluations để đánh giá chất lượng phản hồi của AI Agent.
+Sử dụng các Template có sẵn để xây dựng Agent xử lý các tình huống như hoàn tiền (Refund) hoặc trả hàng (Return).
 
-Việc đánh giá giúp:
-
-- Xác định các trường hợp Agent trả lời chưa chính xác.
-- So sánh nhiều phiên bản Prompt.
-- Đo lường mức độ cải thiện sau khi tối ưu.
-
-## Thực hành với AgentCore Harness
-
-Sử dụng Harness để chạy các bộ kiểm thử và đánh giá hiệu quả hoạt động của Agent trước khi triển khai.
-
-Thông qua đó hiểu rõ hơn quy trình kiểm thử AI Agent trong môi trường phát triển.
+Thông qua bài thực hành này, người học hiểu rõ hơn quy trình phát triển và kiểm thử AI Agent trong thực tế.
 
 ---
 
@@ -172,55 +162,52 @@ Thông qua đó hiểu rõ hơn quy trình kiểm thử AI Agent trong môi trư
 
 ## Về Amazon Bedrock AgentCore
 
-- Hiểu cách sử dụng Memory để xây dựng AI Agent có khả năng cá nhân hóa trải nghiệm người dùng.
-- Biết cách theo dõi hoạt động của Agent thông qua Observability.
-- Hiểu quy trình đánh giá AI Agent bằng AgentCore Evaluations.
-- Nắm được vai trò của Harness trong quá trình kiểm thử và cải tiến Agent.
+- Hiểu cách AgentCore trừu tượng hóa (abstract) nhiều quy trình phức tạp thành các công cụ dễ sử dụng.
+- Nắm được vai trò của Memory, Evaluations và Observability trong toàn bộ vòng đời của AI Agent.
 
 ## Về phát triển AI Agent
 
-- AI Agent không chỉ cần tạo câu trả lời chính xác mà còn phải được đánh giá và theo dõi trong suốt vòng đời phát triển.
-- Memory giúp nâng cao trải nghiệm người dùng bằng cách duy trì ngữ cảnh hội thoại.
-- Việc kiểm thử và đánh giá thường xuyên giúp cải thiện chất lượng và độ tin cậy của hệ thống.
+- Nhận thấy rằng phần lớn công việc xây dựng AI Agent thực tế nằm ở Software Engineering.
+- Memory, Tool Integration, Observability và Evaluation quan trọng không kém bản thân mô hình AI.
+- AI Model chỉ là một thành phần trong toàn bộ hệ thống Agentic AI.
 
 ## Về triển khai thực tế
 
-- Một AI Agent hoàn chỉnh cần có khả năng ghi nhớ, quan sát, đánh giá và tối ưu liên tục.
-- Các thành phần như Registry, Harness và Policy giúp hệ thống dễ quản lý, mở rộng và vận hành an toàn hơn.
-- Việc theo dõi chi phí và hiệu năng là yếu tố quan trọng khi triển khai AI ở quy mô doanh nghiệp.
+- Hiểu được tầm quan trọng của việc kiểm soát chi phí và tối ưu hiệu năng.
+- Nhận thức được vai trò của Policy trong việc đảm bảo bảo mật và tuân thủ.
+- Biết cách xây dựng AI Agent có khả năng vận hành ổn định trong môi trường doanh nghiệp.
 
 ---
 
 # Ứng Dụng Vào Công Việc
 
-- Áp dụng Memory để xây dựng chatbot hoặc trợ lý AI có khả năng ghi nhớ thông tin người dùng.
-- Sử dụng Evaluations để đánh giá chất lượng phản hồi trước khi triển khai hệ thống.
-- Theo dõi hoạt động của Agent bằng Observability nhằm phát hiện và xử lý lỗi nhanh hơn.
-- Tận dụng Harness để kiểm thử và cải thiện AI Agent trước khi đưa vào môi trường Production.
-- Thiết lập Policy nhằm đảm bảo Agent hoạt động an toàn và tuân thủ các yêu cầu của doanh nghiệp.
+- Áp dụng quy trình **Design → Evaluate → Deploy** trong các dự án AI.
+- Sử dụng Observability để theo dõi hiệu năng và tối ưu chi phí token.
+- Xây dựng thư viện Agent và Tool dùng chung thông qua Registry.
+- Thiết kế AI Agent có khả năng ghi nhớ ngữ cảnh nhằm nâng cao trải nghiệm người dùng.
+- Áp dụng các Policy để đảm bảo hệ thống AI tuân thủ yêu cầu bảo mật của doanh nghiệp.
 
 ---
 
 # Trải nghiệm trong buổi học
 
-Buổi học về **Advanced Amazon Bedrock AgentCore** giúp tôi hiểu rõ hơn những thành phần quan trọng cần có để xây dựng một AI Agent có thể vận hành trong môi trường thực tế, không chỉ dừng lại ở việc tạo câu trả lời.
+Buổi học giúp tôi thay đổi cách nhìn về việc phát triển AI Agent.
 
-## Học hỏi về quy trình phát triển AI Agent
+Trước đây, tôi thường tập trung vào việc xây dựng một chatbot hoặc một Agent có thể trả lời câu hỏi. Tuy nhiên, sau buổi học, tôi nhận thấy rằng việc phát triển một AI Agent trong môi trường doanh nghiệp không chỉ dừng lại ở khả năng sinh nội dung mà còn bao gồm rất nhiều yếu tố khác như quản lý bộ nhớ, giám sát hệ thống, đánh giá chất lượng, tối ưu hiệu năng và đảm bảo tính bảo mật.
 
-- Tôi hiểu rõ vai trò của **Memory** trong việc cá nhân hóa trải nghiệm người dùng và duy trì ngữ cảnh giữa các cuộc hội thoại.
-- Tôi biết cách sử dụng **Observability** để theo dõi toàn bộ quá trình hoạt động của Agent và hỗ trợ phân tích, gỡ lỗi.
-- Tôi nhận thấy **Evaluations** và **Harness** là những công cụ quan trọng để đánh giá, kiểm thử và tối ưu chất lượng AI Agent trước khi triển khai.
+## Học hỏi từ buổi đào tạo
 
-## Hiểu thêm về vận hành AI trong doanh nghiệp
-
-- Buổi học giúp tôi nhận thức rằng việc xây dựng AI Agent không chỉ tập trung vào mô hình ngôn ngữ mà còn cần chú trọng đến khả năng quan sát, đánh giá, tối ưu hiệu năng và quản trị hệ thống.
-- Các thành phần như **Registry**, **Policy** và **Optimization** góp phần giúp AI Agent dễ quản lý, an toàn và có khả năng mở rộng trong môi trường doanh nghiệp.
+- Hiểu rõ vai trò của Memory trong việc cá nhân hóa trải nghiệm người dùng.
+- Biết cách sử dụng Observability để theo dõi toàn bộ quá trình hoạt động của Agent.
+- Hiểu quy trình đánh giá AI Agent thông qua AgentCore Evaluations.
+- Làm quen với các thành phần như Registry, Harness, Policy và Optimization.
 
 ## Bài học rút ra
 
-- Một AI Agent chất lượng cần được đánh giá và cải tiến liên tục trong suốt vòng đời phát triển.
-- Việc kết hợp Memory, Observability và Evaluations giúp nâng cao trải nghiệm người dùng cũng như tăng độ tin cậy của hệ thống.
-- Kiểm thử và giám sát là những bước không thể thiếu để triển khai AI Agent hiệu quả trong thực tế.
+- Xây dựng AI Agent là sự kết hợp giữa AI và Software Engineering.
+- Khả năng giám sát, đánh giá và tối ưu hóa quan trọng không kém việc lựa chọn mô hình AI.
+- Một AI Agent chất lượng cần được thiết kế để có thể mở rộng, bảo trì và vận hành lâu dài trong môi trường doanh nghiệp.
+
 
 ## Một số hình ảnh trong buổi học
 

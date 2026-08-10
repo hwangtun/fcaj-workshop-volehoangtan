@@ -12,162 +12,156 @@ pre: " <b> 4.2. </b> "
 
 ## Objectives of the Event
 
-- Learn the advanced capabilities of Amazon Bedrock AgentCore.
-- Understand how to build AI Agents that can retain context and provide personalized user experiences.
-- Explore tools for evaluating, monitoring, and optimizing AI Agents during operation.
-- Gain hands-on experience with AgentCore components for developing and assessing AI Agents.
+- Explore the advanced capabilities of **Amazon Bedrock AgentCore**.
+- Learn how to build AI Agents that can retain conversational context and provide personalized user experiences.
+- Understand the tools used to evaluate, monitor, and optimize AI Agents in production environments.
+- Gain hands-on experience with the core components of **Amazon Bedrock AgentCore**.
 
-## Speaker
+## Speakers
 
-- **Giuseppe Marazzotta** – Head of Technology, AWS
+- **Nghia Tran** – Agentic Solutions Architect
+- **Anh Pham** – Cloud Consultant, G-Asia Pacific Vietnam
 
-## Key Topics
+---
 
-### Amazon Bedrock AgentCore L300
+# Key Topics
 
-The session focused on the advanced features of Amazon Bedrock AgentCore, which enable AI Agents to operate more effectively in real-world applications.
+## Amazon Bedrock AgentCore L300
 
-One of the most important features introduced was **Memory**, which allows AI Agents to store and utilize information from previous conversations to deliver a personalized user experience.
+The session focused on the core capabilities required to build production-ready AI Agents using Amazon Bedrock AgentCore.
+
+### Memory
+
+Memory enables AI Agents to retain conversational context through both short-term and long-term memory, allowing them to deliver more personalized responses.
 
 With Memory, an AI Agent can:
 
-- Remember user preferences and personal information.
-- Maintain context across long conversations.
-- Generate responses based on previous interactions.
-- Reduce the need for users to repeat the same information.
+- Remember user preferences and previous interactions.
+- Maintain context across multiple conversations.
+- Reduce repetitive user input.
+- Generate more relevant and personalized responses.
 
-This capability is particularly useful for customer service chatbots, virtual assistants, and enterprise support systems.
+This feature is particularly valuable for customer service chatbots, virtual assistants, and enterprise AI applications.
 
 ### Evaluations
 
-AgentCore Evaluations provide a framework for measuring the quality and effectiveness of AI Agents using different evaluation metrics.
+AgentCore Evaluations provide a framework for measuring the quality and effectiveness of AI Agents using standardized evaluation metrics.
 
 Key capabilities include:
 
 - Measuring response accuracy.
-- Evaluating whether the Agent successfully fulfills user requests.
-- Comparing different prompt or Agent versions.
-- Identifying areas for improvement before deployment to production.
+- Evaluating helpfulness.
+- Comparing multiple prompt or Agent versions.
+- Using Judge Models to automatically score responses.
 
-These evaluation tools enable developers to improve AI Agents based on measurable results rather than subjective observations.
+These evaluation tools enable developers to improve AI Agents based on objective metrics rather than subjective judgment.
 
 ### Observability
 
-Agent Observability provides visibility into how an AI Agent performs during execution.
+Observability provides complete visibility into the execution of AI Agents.
 
 Developers can monitor:
 
+- Execution logs.
+- Request traces.
+- Performance metrics.
 - Agent execution flow.
-- Processing time for each step.
-- Tools invoked by the Agent.
-- Token consumption.
-- Errors occurring during execution.
+- Runtime errors.
 
-These insights make debugging, performance analysis, and optimization significantly easier.
+These capabilities simplify debugging, performance analysis, and system optimization.
 
 ---
 
 # AgentCore Components
 
-In addition to the core capabilities, the session introduced several important AgentCore components.
+In addition to the three core capabilities, the session introduced several supporting components within AgentCore.
 
 ## Registry
 
-Registry is responsible for managing AI Agents, tools, and other reusable resources within the system.
+Registry serves as a centralized repository for managing AI Agents, Tools, and Skills.
 
-It simplifies component reuse and version management throughout the AI development lifecycle.
+It enables:
+
+- Component reuse across projects.
+- Version management.
+- Easier collaboration among development teams.
 
 ## Harness
 
-Harness provides an environment for testing AI Agents before deploying them into production.
+Harness provides a simplified environment for developing and testing AI Agents.
 
 It supports:
 
-- Running multiple evaluation datasets.
-- Comparing different Agent versions.
-- Measuring performance after prompt or configuration changes.
+- Rapid environment setup.
+- Running evaluation datasets.
+- Comparing different Agent implementations.
 
-This helps reduce deployment risks and improves overall system quality.
+This helps reduce deployment risks before releasing AI applications into production.
 
 ## Tools
 
-AgentCore allows developers to integrate external tools to extend the capabilities of AI Agents.
+AgentCore supports integration with external tools that extend the capabilities of AI Agents.
 
 Examples include:
 
-- Querying databases.
-- Calling external APIs.
-- Performing calculations.
-- Accessing enterprise documents and knowledge bases.
+- Browser Tool.
+- Code Interpreter.
+- Payment Tool.
+- External APIs and enterprise services.
 
-As a result, AI Agents can perform practical tasks beyond generating text.
-
-## Payments
-
-The Payments component helps monitor resource usage and associated costs when AI Agents interact with foundation models or external tools.
-
-This enables organizations to better manage operational expenses and optimize cloud resource consumption.
-
-## Optimization
-
-Optimization focuses on improving the overall performance of AI Agents.
-
-Key optimization areas include:
-
-- Reducing response latency.
-- Improving prompt design.
-- Lowering model usage costs.
-- Enhancing response quality.
+These integrations allow AI Agents to perform practical tasks beyond natural language generation.
 
 ## Policy
 
-Policy provides governance mechanisms that define how AI Agents should behave.
+Policy enables developers to define governance rules using the **Seda** policy language.
 
-Examples include:
+Policies can be used to:
 
-- Access control.
-- Behavioral restrictions.
-- Security policies.
-- Compliance with organizational standards.
+- Control access permissions.
+- Restrict Agent behavior.
+- Enforce security requirements.
+- Ensure compliance with organizational policies.
+
+## Optimization
+
+Optimization focuses on improving the overall efficiency of AI Agents.
+
+Areas of optimization include:
+
+- Reducing response latency.
+- Improving prompt quality.
+- Lowering model inference costs.
+- Enhancing response quality.
 
 ---
 
 # Hands-on Lab
 
-The hands-on lab provided practical experience with several AgentCore features.
+The hands-on session provided practical experience with several AgentCore capabilities.
 
-## Adding Memory to an AI Agent
+## Configuring Memory
 
-Participants configured Memory so that an AI Agent could retain information across conversations.
+Participants integrated Memory into an AI Agent, enabling it to retain information across multiple interactions.
 
-This demonstrated the differences between Agents with persistent memory and those without.
+This demonstrated the difference between stateful and stateless AI Agents.
 
 ## Exploring Agent Observability
 
-Participants used the Observability tools to inspect the Agent's execution process.
+Participants used the Observability tools to inspect the Agent execution process.
 
-They were able to monitor:
+They observed:
 
-- Execution steps.
+- Agent invocation flow.
+- Reasoning steps.
+- Execution logs.
+- Request traces.
 - Processing time.
-- Tool usage.
-- Diagnostic information for troubleshooting.
 
-## Evaluating AI Agents
+## Testing AI Agents
 
-Participants used AgentCore Evaluations to measure the quality of Agent responses.
+Participants used pre-built templates to develop an AI Agent capable of handling customer refund and return requests.
 
-The evaluation process helped:
-
-- Identify inaccurate responses.
-- Compare multiple prompt versions.
-- Measure improvements after optimization.
-
-## Exploring AgentCore Harness
-
-Participants used Harness to execute evaluation datasets and validate Agent performance before deployment.
-
-This provided a better understanding of the AI testing workflow during development.
+This exercise demonstrated a practical workflow for developing and testing enterprise AI Agents.
 
 ---
 
@@ -175,60 +169,57 @@ This provided a better understanding of the AI testing workflow during developme
 
 ## Understanding Amazon Bedrock AgentCore
 
-- Learned how Memory enables personalized AI interactions.
-- Understood how Observability supports monitoring and troubleshooting.
-- Gained knowledge of evaluating AI Agents using AgentCore Evaluations.
-- Recognized the importance of Harness for testing and continuous improvement.
+- Learned how AgentCore abstracts many complex engineering tasks into reusable services.
+- Understood the importance of Memory, Evaluations, and Observability throughout the AI Agent lifecycle.
 
 ## AI Agent Development
 
-- AI Agents require continuous monitoring and evaluation in addition to generating accurate responses.
-- Memory significantly improves user experience by preserving conversational context.
-- Regular testing and evaluation are essential for maintaining reliability and performance.
+- Realized that building production-ready AI Agents is primarily a Software Engineering challenge.
+- Memory, Tool Integration, Observability, and Evaluation are just as important as the underlying foundation model.
+- Large Language Models represent only one component of a complete Agentic AI system.
 
-## Production Deployment
+## Enterprise Deployment
 
-- A production-ready AI Agent should support memory, monitoring, evaluation, and continuous optimization.
-- Components such as Registry, Harness, and Policy improve maintainability, scalability, and security.
-- Monitoring both operational performance and infrastructure cost is critical for enterprise AI deployments.
+- Understood the importance of cost optimization and operational efficiency.
+- Recognized the role of Policy in ensuring security and compliance.
+- Learned how to design scalable and maintainable AI Agents for enterprise environments.
 
 ---
 
 # Applying the Knowledge
 
-The knowledge gained from this session can be applied in future projects by:
+The concepts learned during this session can be applied in future AI projects by:
 
-- Building AI chatbots that remember user preferences through Memory.
-- Evaluating response quality before production deployment using AgentCore Evaluations.
-- Monitoring AI Agent behavior with Observability for faster troubleshooting.
-- Using Harness to test and improve AI Agents before release.
-- Applying Policy to ensure AI systems operate securely and comply with organizational requirements.
+- Following a **Design → Evaluate → Deploy** development workflow.
+- Using Observability to monitor Agent performance and optimize token usage.
+- Building reusable Agent and Tool repositories with Registry.
+- Designing AI Agents that retain conversational context through Memory.
+- Applying Policies to improve security and governance.
 
 ---
 
 # Personal Reflection
 
-The **Advanced Amazon Bedrock AgentCore** session provided valuable insights into the essential components required to build enterprise-ready AI Agents. I realized that creating an effective AI Agent involves much more than generating responses—it also requires memory management, evaluation, monitoring, governance, and continuous optimization.
+This session significantly changed my perspective on AI Agent development.
+
+Before attending the workshop, I primarily viewed AI Agents as intelligent chatbots capable of answering user questions. However, the session demonstrated that developing enterprise-grade AI Agents involves much more than prompt engineering or selecting a powerful foundation model.
+
+Building production-ready AI systems also requires memory management, observability, evaluation, governance, optimization, and proper software engineering practices.
 
 ## Learning Experience
 
-Throughout the session, I gained a deeper understanding of:
+During the session, I gained a deeper understanding of:
 
-- How **Memory** enables personalized user interactions by preserving conversation history.
-- How **Observability** provides visibility into Agent execution for monitoring and debugging.
-- How **Evaluations** and **Harness** support systematic testing and quality improvement before deployment.
-
-## Understanding Enterprise AI Operations
-
-The session also demonstrated that developing AI solutions for enterprise environments requires strong operational practices, including governance, monitoring, performance optimization, and cost management.
-
-Components such as **Registry**, **Policy**, and **Optimization** play important roles in ensuring AI systems remain scalable, secure, and maintainable.
+- How Memory enables personalized user experiences by preserving conversation history.
+- How Observability provides complete visibility into Agent execution and simplifies debugging.
+- How Evaluations objectively measure AI quality before deployment.
+- How Registry, Harness, Policy, and Optimization contribute to building scalable enterprise AI systems.
 
 ## Lessons Learned
 
-- High-quality AI Agents require continuous evaluation and improvement throughout their lifecycle.
-- Combining Memory, Observability, and Evaluations leads to more reliable and user-friendly AI systems.
-- Monitoring and testing are essential steps before deploying AI applications into production environments.
+- Developing AI Agents is a combination of Artificial Intelligence and Software Engineering.
+- Monitoring, evaluating, and optimizing an AI Agent are just as important as choosing the underlying language model.
+- A production-ready AI Agent should be designed with scalability, maintainability, security, and governance in mind.
 
 ## Event Photos
 ![Agent Force Deepdive day 2 images](/images/event-img/AFDD2_1.jpg)

@@ -21,3 +21,11 @@ During my internship, I participated in two events. Each one was a memorable exp
 
 ---
 
+### [Event 2](4.2-Event2/)  
+&emsp;**Event Name:** Agent Force - Deepdive Day 2
+
+&emsp;**Date & Time:** 09:00, August 8, 2026  
+
+&emsp;**Location:** 26th Floor, Bitexco Finacial Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+
+&emsp;**Role:** Attendee  

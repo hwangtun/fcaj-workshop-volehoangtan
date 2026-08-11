@@ -38,4 +38,4 @@ Trong hệ thống này, quy trình xử lý hình ảnh được triển khai t
 
 - **IAM và KMS:** Đảm bảo các dịch vụ AWS chỉ có quyền truy cập cần thiết và dữ liệu được bảo vệ trong quá trình lưu trữ.
 
-![overview](../../images/5-Workshop/5.1-Workshop-overview/kientruc.jpg)
+![overview](/images/5-Workshop/5.1-Workshop-overview/kientruc.jpg)

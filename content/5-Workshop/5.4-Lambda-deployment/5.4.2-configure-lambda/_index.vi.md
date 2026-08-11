@@ -197,7 +197,7 @@ Biến này được Lambda sử dụng trong quá trình:
   <!-- - Cấu hình chất lượng nén ảnh. -->
   <!-- - Tạo thumbnail. -->
 
-![environment-variable](../../../images/5-Workshop/5.4-Lambda-deployment/environment-variable.png)
+![environment-variable](/images/5-Workshop/5.4-Lambda-deployment/environment-variable.png)
 
 {{% notice note %}}
 Việc sử dụng Environment Variables giúp tách biệt cấu hình và source code, giúp dễ dàng thay đổi AWS Resource mà không cần chỉnh sửa chương trình.
@@ -261,7 +261,7 @@ Lambda có đủ thời gian để:
 - Upload kết quả.
 - Lưu metadata.
 
-![lambda-resource](../../../images/5-Workshop/5.4-Lambda-deployment/resource.png)
+![lambda-resource](/images/5-Workshop/5.4-Lambda-deployment/resource.png)
 
 ---
 
@@ -444,7 +444,7 @@ image-optimizer-role
 
 ```
 
-![lambda-configured](../../../images/5-Workshop/5.4-Lambda-deployment/resource.png)
+![lambda-configured](/images/5-Workshop/5.4-Lambda-deployment/resource.png)
 
 ---
 

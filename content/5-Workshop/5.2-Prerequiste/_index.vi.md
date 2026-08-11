@@ -22,7 +22,7 @@ Trong quá trình phát triển, nhóm sử dụng IAM User với các quyền �
 
 Đối với môi trường Production, nên áp dụng nguyên tắc **Least Privilege**, chỉ cấp những quyền cần thiết cho từng dịch vụ nhằm tăng cường bảo mật hệ thống.
 
-![iam](../../images/5-Workshop/5.2-Prerequisite/iam_policy.png)
+![iam](/images/5-Workshop/5.2-Prerequisite/iam_policy.png)
 
 <!-- <center>
 Hình 5.2.1: IAM Policy tự thiết lập với các quyền truy cập cần thiết theo nguyên tắc Least Privilege
@@ -55,7 +55,7 @@ Tạo hai Amazon S3 Bucket để phục vụ quá trình xử lý hình ảnh:
 
 Sau khi hoàn tất, kiểm tra danh sách Bucket trong Amazon S3 Console.
 
-![s3](../../images/5-Workshop/5.2-Prerequisite/s3-buckets.png)
+![s3](/images/5-Workshop/5.2-Prerequisite/s3-buckets.png)
 
 ---
 
@@ -79,7 +79,7 @@ Ngoài ra, bảng còn lưu các thông tin như:
 - uploadedAt
 - processedAt
 
-![dynamodb](../../images/5-Workshop/5.2-Prerequisite/dynamodb.png)
+![dynamodb](/images/5-Workshop/5.2-Prerequisite/dynamodb.png)
 
 ---
 
@@ -87,7 +87,7 @@ Ngoài ra, bảng còn lưu các thông tin như:
 
 Tạo IAM Role dành cho AWS Lambda và cấp các quyền cần thiết để Lambda có thể tương tác với các dịch vụ AWS trong quá trình xử lý ảnh. IAM Role bao gồm quyền đọc/ghi Amazon S3, ghi metadata vào Amazon DynamoDB và ghi log lên Amazon CloudWatch. Trong trường hợp sử dụng mã hóa bằng AWS KMS hoặc gửi thông báo trực tiếp qua SNS, các quyền tương ứng sẽ được bổ sung vào Role. Sau khi tạo hoàn tất, IAM Role được gán làm Execution Role cho Lambda Function.
 
-![iam-role](../../images/5-Workshop/5.2-Prerequisite/iam-role-for-lambda.png)
+![iam-role](/images/5-Workshop/5.2-Prerequisite/iam-role-for-lambda.png)
 
 ---
 

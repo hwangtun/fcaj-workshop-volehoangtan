@@ -73,7 +73,7 @@ Main processing workflow:
 9. Amazon SNS sends notifications if processing errors occur.
 10. Users view their processing history and download the optimized images.
 
-
+![Architecture](/images/5-Workshop/5.1-Workshop-overview/kientruc.jpg)
 
 #### AWS Services Used
 

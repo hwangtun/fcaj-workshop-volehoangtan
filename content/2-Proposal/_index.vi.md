@@ -73,7 +73,7 @@ Luồng xử lý chính:
 9. SNS gửi thông báo nếu xảy ra lỗi.
 10. Người dùng xem lịch sử và tải ảnh đã xử lý.
 
-_(Thêm sơ đồ kiến trúc của nhóm tại đây.)_
+![Architecture](/images/5-Workshop/5.1-Workshop-overview/kientruc.jpg)
 
 #### Dịch vụ AWS sử dụng
 
